@@ -1,0 +1,132 @@
+<sburb description='first room'>
+    <dependencies>
+        <dependency>chars/karkat.xml</dependency>
+        <dependency>chars/terezi.xml</dependency>
+        <dependency>chars/vriska.xml</dependency>
+        <dependency>chars/npc.xml</dependency>
+    </dependencies>
+
+    <assets>
+        <asset name="firstRoomBG" type="graphic">rooms/firstRoomBG.png</asset>
+        <asset name="firstRoomFG" type="graphic">rooms/firstRoomFG.png</asset>
+        <asset name='firstRoomMap' type='graphic'>rooms/firstRoomMap.png</asset>
+
+        <asset name='transportalizerSheet' type='graphic'>items/transportalizer.png</asset>
+        <asset name='unirealSheet' type='graphic'>items/unireal.png</asset>
+        <asset name='honkpileSheet' type='graphic'>items/honkpile.png</asset>
+        <asset name='fiduspawnSheet' type='graphic'>items/fiduspawn.png</asset>
+
+        <asset name='routerSheet' type='graphic'>items/router.png</asset>
+        <asset name='megalovania' type='audio'>audio/music/MEGALOVANIA.mp3</asset>
+        <asset name='WSSong' type='audio'>audio/music/walkstabwalk.mp3</asset>
+    </assets>
+
+    <rooms>
+        <room name='firstRoom' walkableMap='firstRoomMap' mapScale='3'>
+            <character class='karkat' x='220' y='360'>
+                <action class='talkGCKarkat' />
+                <action class='talkAGKarkat' />
+                <action class='beKarkat' />
+            </character>
+
+            <sprite name='karComp' x='220' y='235' width='20' height='20' collidable='true' depthing='1'>
+                <action class='CCG-PGAMemo' />
+            </sprite>
+
+            <character class='terezi' x='120' y='480'>
+                <action class='talkCGTerezi' />
+                <action class='lowdownTerezi' />
+                <action class='talkAGTerezi' />
+                <action class='beTerezi' />
+            </character>
+
+            <character class='vriska' x='495' y='820'>
+                <action class='talkCGVriska' />
+                <action class='talkGCVriska' />
+                <action class='beVriska' />
+            </character>
+
+            <character class='aradia' x='485' y='270' state='walkBack'>
+            </character>
+            <character class='tavros' x='710' y='560'>
+            </character>
+            <character class='sollux' x='360' y='270' state='walkBack'>
+            </character>
+            <character class='nepeta' x='710' y='360' state='walkLeft'>
+            </character>
+            <character class='kanaya' x='360' y='820'>
+            </character>
+            <character class='equius' x='640' y='640' state='walkBack'>
+            </character>
+            <character class='eridan' x='110' y='730' state='walkRight'>
+            </character>
+            <character class='feferi' x='445' y='375' state='walkLeft'>
+            </character>
+
+            <sprite name='transportalizer' x='440' y='535' width='80' height='50'>
+                <animation sheet='transportalizerSheet' y='-100' x='-70' />
+                <action name='Transportalize.' command='talk'>
+                    <args>
+                        @! There's a note here...
+                        @! TRANSPORTALIZER CLOSED. check back in a couple of days. - t
+                    </args>
+                </action>
+            </sprite>
+            <sprite name='unireal' x='595' y='440' width='80' height='50'>
+                <animation sheet='unirealSheet' x='-70' y='-41' />
+                <action name='Examine UNIREAL AIR.' command='talk'>
+                    <args>
+                        @! It's almost impossible to cross the room without tripping over this goddamn thing. The mess in here is unireal. I mean unreal.
+                    </args>
+                </action>
+            </sprite>
+            <sprite name='honkpile' x='246' y='695' width='140' height='40' collidable='true' depthing='1'>
+                <animation sheet='honkpileSheet' x='-80' y='-70' />
+                <action name='Examine pile of shitty horns.' command='talk'>
+                    <args>
+                         @! Look at this shit all over the floor. Barely been here a couple hours and this dude turns the lab into his own personal clown sty.
+                    </args>
+                </action>
+            </sprite>
+            <sprite name='fiduspawn' x='697' y='700' width='50' height='50' >
+                <animation sheet='fiduspawnSheet' x='-30' y='-20' />
+                <action name='Examine host plush.' command='talk'>
+                    <args>
+                        @! Looks like SOMEONE needs to stop playing games for girls.
+                    </args>
+                </action>
+            </sprite>
+
+
+            <sprite name='router' x='100' y='235' width='20' height='20' collidable='true' depthing='1'>
+                <animation sheet='routerSheet' y='-45' length='7' frameInterval='3' />
+                <action name="Play Karkat's Theme" command="playSong">
+                    <args>karkatSong</args>
+                </action>
+                <action name="Play Terezi's Theme" command="playSong">
+                    <args>tereziSong</args>
+                </action>
+                <action name="Play Vriska's Theme" command="playSong">
+                    <args>vriskaSong</args>
+                </action>
+                <action name="Play Spider's Claw" command="playSong">
+                    <args>vriskaFastSong</args>
+                </action>
+                <action name="Play Megalovania" command="playSong">
+                    <args>megalovania</args>
+                </action>
+                <action name="Play Walk-Stab-Walk" command="playSong">
+                    <args>WSSong</args>
+                </action>
+            </sprite>
+
+            <sprite name='firstRoomBG'>
+                <animation sheet='firstRoomBG' />
+            </sprite>
+            <sprite name='firstRoomFG' depthing='2' x='5' y='800'>
+                <animation sheet='firstRoomFG' />
+            </sprite>
+        </room>
+    </rooms>
+
+</sburb>

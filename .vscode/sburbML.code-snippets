@@ -1,0 +1,72 @@
+{
+	// Place your UnknownGourd.github.io workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"dialogsprite": {
+		"scope": "xml",
+		"prefix": "ds",
+		"body": [
+			"<animation name='$0' class='${1:char}-dialog' sheet='$1_${2:emote}' length='${3:1}' />",
+			"<asset name='$1_$2' type='graphic'>dialogsprites/$1_$2.png</asset>" 
+		],
+		"description": "New Dialogsprite"
+	},
+	"action": {
+		"scope": "xml",
+		"prefix": "ac",
+		"body": [
+			"<action name='$1' command='${2:talk}'>",
+			"\t<args>",
+			"\t\t$0",
+			"\t</args>",
+			"</action>"
+		],
+		"description": "New Action"
+	},
+	"sprite": {
+		"scope": "xml",
+		"prefix": "sprite",
+		"body": [
+			"<sprite name='$1' x='${2:100}' y='${3:100}' width='${4:50}' height='${5:50}' >",
+			"\t<animation sheet='$1Sheet' $0/>",
+			"</sprite>"
+		],
+		"description": "New Sprite"
+	},
+	"sburb": {
+		"scope": "xml",
+		"prefix": "sburb",
+		"body": [
+			"<sburb description='$1'>",
+			"\t<dependencies>",
+			"\t\t$0",
+			"\t</dependencies>",
+			"",
+			"\t<classes>",
+			"\t</classes>",
+			"",
+			"\t<assets>",
+			"\t</assets>",
+			"",
+			"\t<rooms>",
+			"\t</rooms>",
+			"</sburb>"
+		],
+		"description": "New SburbML File"
+	},
+	
+}

@@ -1,0 +1,112 @@
+<sburb description='terezi'>
+
+<classes>
+	<animation class='terezi-dialog' frameInterval='6' x='-205' y='-475'/>
+
+	<character class='terezi' name='terezi' sx='-35' sy='-62' sWidth='93' sHeight='93' width='35' height='25' sheet='tereziSheet' state='walkRight' facing='Front'>
+	</character>
+	
+	<action class='beTerezi' name='Be Terezi.' command='changeChar'>
+		<args>terezi</args>
+		<action command='playSong'>
+			<args>tereziSong</args>
+		</action>
+	</action>
+	<action class='talkCGTerezi' name='Talk to Terezi.' sprite='karkat' command='talk'>
+		<args>
+@GCTalk TEREZI: WOW CH3CK OUT WHO F1N4LLY WOK3 UP!
+@GCTalk TEREZI: W3V3 B33N TRY1NG TO W4K3 YOU FOR 4N HOUR, BUT YOU W3R3 UNR3SPONS1V3 TO 3V3N TH3 MOST S3NS3L3SS OF C4N3 DRUBB1NGS >:]
+@CGTalk KARKAT: MY HEAD HURTS.
+@GCTalk TEREZI: PROB4BLY DU3 TO TH3 4FOR3M3NT1ON3D NUB DRUBB1NGS
+@CGRancorous KARKAT: WILL YOU SHUT UP ABOUT THE DRUBBINGS. PUT THAT CANE AWAY, DAMMIT. IT'S NOT LIKE YOU EVEN NEED IT.
+@CGTalk KARKAT: I HAD A HORRIBLE DREAM, OK.
+@GCTalk TEREZI: OH?
+@CGTalk KARKAT: I FINALLY WOKE UP ON PROSPIT.
+@GCChummy TEREZI: YOU D1D???
+@GCChummy TEREZI: OH GOD, 1 C4NT B3L13V3 1 M1SS3D 1T!
+@CGTalk KARKAT: YEAH WELL, SORRY WE CAN'T GO ON OUR ENCHANTED GOLDEN MAGIC CARPET RIDE OR WHATEVER YOU HAD IN STORE FOR US, BUT NOW IT'S TOO LATE.
+@CGTalk KARKAT: DREAM ME IS DEAD.
+@GCPassive TEREZI: 1 KNOW >:[
+@GCRancorous TEREZI: 4LL OF US 4R3, PROSP1T W4S COMPL3T3LY D3STROY3D
+@CGTalk KARKAT: OH SHIT, REALLY?
+@CGTalk KARKAT: GUESS THAT'S NOT TOO SURPRISING. ANYWAY, I SAW THE DEMON AGAIN.
+@CGTalk KARKAT: I THINK I KNOW WHO IT IS.
+@GCQuestion TEREZI: WHO 1S 1T >:?
+@CGTalk KARKAT: I DON'T KNOW HOW IT'S POSSIBLE...
+@CGTalk KARKAT: I NEED TO SEARCH FOR MORE ANSWERS BEFORE I KNOW FOR SURE.
+@GCRancorous TEREZI: STOP B31NG MYST3R1OUS 4ND T3LL M3!
+@CGRancorous KARKAT: NO WAY. I'M NOT JUMPING TO HASTY CONCLUSIONS. IF IT TURNS OUT I'M RIGHT, THEN I GUESS WE BOTH GET TO SAY I TOLD YOU SO.
+@GCTalk TEREZI: 4RGH, F1N3
+@GCTalk TEREZI: SO, YOU S4W H1M JUST B3FOR3 H3 D3STROY3D PROSP1T?
+@CGTalk KARKAT: YEAH. AND THAT WASN'T EVEN THE BAD PART OF THE DREAM.
+@GCTalk TEREZI: TH4T W4S 4N HOUR 4GO! WH4T H4V3 YOU B33N DR34M1NG 4BOUT S1NC3?
+@CGTalk KARKAT: I DON'T WANT TO TALK ABOUT IT.
+@CGJudge KARKAT: THE BOTTOM LINE IS, EVERYONE HERE IS FORBIDDEN FROM GOING TO SLEEP.
+@GCPassive TEREZI: FORB1DD3N?
+@CGJudge KARKAT: YES, AS YOUR LEADER, I AM ORDERING ALL PROSPIT DREAMERS TO STAY AWAKE, NO MATTER HOW TIRED YOU GET.
+@GCTalk TEREZI: UM, 4LR1GHT >:// 
+@CGTalk KARKAT: DO YOU EVER EVEN GET TIRED?
+@GCRancorous TEREZI: WH4TS TH4T SUPPOS3D TO M34N!
+@CGTalk KARKAT: ALL YOU DO IS RUN YOUR MOUTH ALL DAY, AND SNIFF AND LICK PEOPLE INAPPROPRIATELY WITH THAT SHIT EATING GRIN.
+@CGTalk KARKAT: I DON'T THINK I'VE EVER EVEN SEEN YOU YAWN.
+@GCTalk TEREZI: 1M G3TT1NG PR3TTY T1R3D R1GHT NOW 4S 4 M4TT3R OF F4CT
+@GCChummy TEREZI: T1R3D OF YOUR BULLSH1T!
+@CGIdle KARKAT: GOD I'M TIRED.
+		</args>
+	</action>
+	<action class='lowdownTerezi' name='Get lowdown from Terezi.' sprite='karkat' command='talk'>
+		<args>
+@GCTalk TEREZI: SO GU3SS WH4T
+@GCTalk TEREZI: W3V3 B33N 1N CONT4CT W1TH SOM3 4L13NS FROM TH3 UN1V3RS3 W3 CR34T3D
+@CGTalk KARKAT: OK. SO?
+@GCTalk TEREZI: DONT YOU TH1NK TH4TS K1ND OF N34T?
+@CGTalk KARKAT: NO. IT'S BORING. WHO CARES?
+@GCTalk TEREZI: 1 THOUGHT 4S OUR 1NTR3P1D L34D3R TH4T W4S SOM3TH1NG YOU M1GHT W4NT TO KNOW
+@CGTalk KARKAT: ALRIGHT, AS LEADER, I RECOMMEND WE DELIVER THEM A DELIGHTFUL GIFT BASKET VIA TRANSUNIVERAL BULGE THRUST.
+@CGJudge KARKAT: ARE YOU TAKING THIS DOWN???
+@GCPassive TEREZI: >:P
+@GCTalk TEREZI: 1M NOT S4Y1NG W3 N33D TO M4K3 FR13NDS W1TH TH3M OR 4NYTH1NG, BUT W3V3 B3GUN TO SUSP3CT TH3Y H4V3 SOM3TH1NG TO DO W1TH OUR S3SS1ON, P4R4DOX1C4LLY SP34K1NG
+@CGIdle KARKAT: IS ANYTHING EVER NOT PARADOXICALLY SPEAKING?
+@GCTalk TEREZI: M4YB3 W3 C4N F1GUR3 OUT 4 W4Y TO G3T OURS3LV3S OUT OF TH1S J4M?
+@CGTalk KARKAT: NOPE. I ALREADY TOLD YOU. WE'RE DOOMED. A MEANINGLESS RACE OF ALIENS WON'T CHANGE THAT.
+@CGTalk KARKAT: NOW IF YOU'LL EXCUSE ME, I'VE GOT A LOT OF IMPORTANT SHIT TO DO.
+@GCTalk TEREZI: YOU M34N 4 LOT OF 1MPORT4NT W4ND3R1NG 4ROUND 41ML3SSLY 4ND T4LK1NG TO P3OPL3?
+@CGTalk KARKAT: YES, EXACTLY.
+		</args>
+	</action>
+
+	<action class='talkAGTerezi' name='Talk to Terezi' sprite='vriska' command='talk'>
+		<args>
+@AGTalk VRISKA: The Scourge Sisters are 8ack in action! Yeah!!!!!!!! 
+@GCRancorous TEREZI: NO W3 4R3 NOT! W1LL YOU STOP W1TH TH4T 4LR34DY??? 
+@AGTalk VRISKA: Sure we are! You'll find out. Just give it a few hours. 
+@GCTalk TEREZI: 1 W1LL G1V3 YOU 4 F3W DRUBB1NGS! 
+@AGTalk VRISKA: Yes!!!!!!!! That's the spirit, Redglare. 
+@GCPassive TEREZI: BL4R, PL34S3 DO NOT ST4RT US1NG MY OLD FL4RP1NG N4M3, 1T'S SO 3MB4RR4SS1NG
+		</args>
+	</action>
+</classes>
+
+<assets>
+	<asset name='tereziSheet' type='graphic'>chars/terezi_sheet.png</asset>
+	<asset name='tereziSong' type='audio'>audio/music/terezistheme.mp3</asset> <!-- loops to 0 --> 
+
+	<asset name='terezi_talk' type='graphic'>dialogsprites/terezi_talk.png</asset>
+	<asset name='terezi_chummy' type='graphic'>dialogsprites/terezi_chummy.png</asset>
+	<asset name='terezi_passive' type='graphic'>dialogsprites/terezi_passive.png</asset>
+	<asset name='terezi_rancorous' type='graphic'>dialogsprites/terezi_rancorous.png</asset>
+	<asset name='terezi_question' type='graphic'>dialogsprites/terezi_question.png</asset>
+	<asset name='terezi_idle' type='graphic'>dialogsprites/not_found.png</asset>
+</assets>
+
+<hud>
+	<dialogsprites>
+		<animation name='GCTalk' class='terezi-dialog' sheet='terezi_talk' length='2' />
+		<animation name='GCChummy' frameInterval='2' class='terezi-dialog' sheet='terezi_chummy'  length='2' />
+		<animation name='GCPassive' class='terezi-dialog' sheet='terezi_passive' length='1'/>
+		<animation name='GCRancorous' class='terezi-dialog' sheet='terezi_rancorous' length='2'/>
+		<animation name='GCQuestion' class='terezi-dialog' sheet='terezi_question' length='1' />
+		<animation name='GCIdle' class='terezi-dialog' sheet='terezi_idle' length='1' />
+	</dialogsprites>
+</hud>
+</sburb>

@@ -1,0 +1,79 @@
+<sburb description='vriska'>
+
+<classes>
+	<animation class='vriska-dialog' frameInterval='5' x='-185' y='-475'/>
+
+	<character class='vriska' name='vriska' sx='-30' sy='-65' sWidth='69' sHeight='87' width='35' height='25' sheet='vriskaSheet' state='walkFront' facing='Front'>
+	</character>
+	
+	<action class='beVriska' name='Be vriska.' command='changeChar'>
+		<args>vriska</args>
+		<action command='playSong'> 
+			<args>vriskaSong</args>
+		</action>
+	</action>
+	
+	<action class='talkCGVriska' name='Talk to vriska.' sprite='karkat' command='talk'>
+		<args>
+@CGTalk KARKAT: HEY VRISKA, WHAT ARE YOU DOING. 
+@CGTalk KARKAT: PLEASE, FOR THE LOVE OF GOD, LET IT BE SOMETHING INCONSEQUENTIAL AND BENIGN. 
+@AGTalk VRISKA: Karkat! Man, you were out for a long time. I have made so many plans for these humans while you were asleep. Do you know how many plans have 8een made? 
+@CGTalk KARKAT: PROBABLY ALL OF THEM, EVEN THOUGH PLANS AREN'T REALLY AN EXHAUSTIVELY QUANTIFIABLE THING AND WE BOTH FUCKING KNOW THAT. 
+@AGTalk VRISKA: Yes! Aaaaaaaall of them. So many irons too. Guess where the irons are! 
+@CGTalk KARKAT: PLEASE DON'T LET THEM BE IN THE FIRE, PLEASE DON'T LET THEM BE IN THE FIRE... 
+@AGIdle VRISKA: They are........ 
+@AGIdle VRISKA: IN 
+@AGIdle VRISKA: THE 
+@AGVain VRISKA: FIIIIIIIIRE!!!!!!!! ::::) 
+@CGIdle KARKAT: GOD FUCKING DAMMIT. 
+@CGTalk KARKAT: LOOK WHATEVER YOU'RE DOING, STOP. OR PUT IT ON PAUSE. CAN YOU PLEASE DO THAT? 
+@CGTalk KARKAT: I WASN'T GOING TO BOTHER WITH THE HUMANS BUT NOW YOU'RE MAKING ME NERVOUS. JUST GIVE ME THE CHANCE TO LOOK INTO THIS MATTER, AND THEN I'LL BRIEF EVERYBODY. 
+@CGTalk KARKAT: MAYBE WITH A SPEECH OR SOMETHING. CAN YOU DO THAT? 
+@CGTalk KARKAT: PLEEEEEEEEASE? I JUST SAID THAT WITH EIGHT E\'S. 
+@AGTalk VRISKA: Fine, I will take a 8r8k, Karkat. 8ut only 8ecause you were so polite a8out it. 
+@AGTalk VRISKA: It will give me a chance to go get some stuff done!
+		</args>
+	</action>
+
+    <action class='talkGCVriska' name='Talk to vriska.' sprite='terezi' command='talk'>
+		<args>
+@AGTalk VRISKA: Hey, if it isn't miss money8ags! How are you enjoying your fa8ulous wealth! 
+@AGTalk VRISKA: If it was me, I would feel ashamed to get rich that way. 8y having a secret admirer just hand it to me like that, rather than earning it. That's just me though! 
+@GCTalk TEREZI: GOD, YOUR J34LOUSLY 1S R1D1CULOUS! NOBODY C4R3S 4BOUT STOCKP1L1NG M34N1NGL3SS TR34SUR3 OTH3R TH4N YOU. W1LL YOU GROW UP??? 
+@AGTalk VRISKA: I guess you're right. I'm just giving you a hard time! 
+@AGRancorous VRISKA: You know, like the good old days. Don't you miss our friendly rivalry sometimes? 
+@GCChummy TEREZI: H4H4H4, FR13NDLY????? 
+@AGIdle VRISKA: Sure! So to speak. 
+@AGTalk VRISKA: Anyway, just so you know, you're not the only one who can play a chumpy 8oy, and manipul8 him into doing what you want. 
+@AGRancorous VRISKA: In fact, I'm not even going to use any powers! Just to prove it's no 8ig deal. 
+@GCPassive TEREZI: WH4T TH3 H3LL 4R3 YOU T4LK1NG 4BOUT 
+@AGTalk VRISKA: You'll see!!!!!!!! Oops, smell. Haha, 8n't it a 8ummer you never died???????? 
+@GCIdle TEREZI: NO >:P 
+@AGTalk VRISKA: Oh well. Anyway, let's get this party started. I declare the chumpy impressiona8le human 8oy-off to 8e........ 
+@AGVain VRISKA: OOOOOOOON! :::;) 
+@GCPassive TEREZI: UGH, YOU 4R3 SO CR4ZY
+		</args>
+	</action>
+</classes>
+
+<assets>
+	<asset name='vriskaSheet' type='graphic'>chars/vriska_sheet.png</asset>
+	<asset name='vriskaSong' type='audio'>audio/music/VriskasTheme3.mp3</asset> <!-- loops to 0 -->
+	<asset name='vriskaFastSong' type='audio'>audio/music/spidersclawLOOP2.mp3</asset>
+
+	<asset name='vriska_talk' type='graphic'>dialogsprites/vriska_talk.png</asset>
+	<asset name='vriska_vain' type='graphic'>dialogsprites/not_found.png</asset>
+	<asset name='vriska_rancorous' type='graphic'>dialogsprites/not_found.png</asset>
+</assets>
+
+<hud>
+	<dialogsprites>
+		<animation name='AGTalk' class='vriska-dialog' sheet='vriska_talk' length='11' /> <!-- holy cow -->
+		<animation name='AGVain' class='vriska-dialog' sheet='vriska_vain' length='1' />
+		<animation name='AGRancorous' class='vriska-dialog' sheet='vriska_rancorous' length='1' />
+		<animation name='AGIdle' class='vriska-dialog' sheet='vriska_rancorous' length='1' />
+		<animation name='AGMad' class='vriska-dialog' sheet='vriska_rancorous' length='1' />
+
+	</dialogsprites>
+</hud>
+</sburb>

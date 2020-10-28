@@ -3,9 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>html5 walkarounds</title>
+
+    <script type="text/javascript" src="sburb.min.js"></script>
     <style>
         body {
             background: #535353;
+        }
+
+        select {
+          margin-left: 200px;
         }
 
         #content {
@@ -16,22 +22,48 @@
             width: 1024px;
             height: 720px;
         }
+
+        #content p {
+          text-align: center;
+        }
         
-        h1 {
+        h1, h2 {
             font-weight: bold;
             text-align: center;
             padding: 10px;
         }
 
+        footer {
+          border: 20px solid #c6c6c6;
+          margin: 0 auto;
+          width: 1024px;
+          background-color: #c6c6c6;
+        }
+
     </style>
   </head>
-  <body>
+  <body onload="Sburb.initialize('SburbDeploy','alterniabound/init.xml',false);">
     <div id="content">
         <h1>Old Flash Walkarounds</h1>
-        <ul>
-            <li>[S] Past Karkat: Wake Up</li>
-            <li>[S] Act 4</li>
-        </ul>
+        <select name='walkarounds'>
+          <option disabled value='act_4'>[S] Act 4</option>
+          <option value='alterniabound'>[S] Past Karkat: Wake Up</option>
+          <option disabled value='egbertbound'>[S] John: Enter Village</option>
+          <option disabled value='ab_return'>[S] Kanaya: Return to the core.</option>
+          <option disabled value='ab_seek'>[S] Equius: Seek the highbl00d.</option>
+        </select>
+        <button>launch</button>
+
+        <h2>[s] Past Karkat: Wake Up</h2>
+        <div>
+          <div id="SburbDeploy"></div>
+          <noscript>Javascript Required!</noscript>
+        </div>
+        <p>Original page: </p>
     </div>
+    <footer>
+      Original games 2010-2012 <a href="https://homestuck.com/">Homestuck</a>. 
+      Written using the <a href='https://github.com/WhatPumpkin/Sburb'>sburbML</a> javascript engine.
+    </footer>
   </body>
 </html>

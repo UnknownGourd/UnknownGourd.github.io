@@ -1,0 +1,547 @@
+<sburb description='other trolls'>
+    <classes>
+        <animation class='aradia-dialog' frameInterval='6' x='-150' y='-450' />
+
+        <animation class='tavros-dialog' frameInterval='6' x='-170' y='-475' />
+        <animation class='sollux-dialog' frameInterval='6' x='-170' y='-475' />
+        <animation class='nepeta-dialog' frameInterval='6' x='-170' y='-475' />
+        <animation class='kanaya-dialog' frameInterval='6' x='-170' y='-475' />
+        <animation class='equius-dialog' frameInterval='6' x='-170' y='-475' />
+        <animation class='eridan-dialog' frameInterval='6' x='-170' y='-475' />
+        <animation class='feferi-dialog' frameInterval='6' x='-170' y='-475' />
+
+        <character class='aradia' name='aradia' sx='-30' sy='-65' sWidth='72' sHeight='87' width='35' height='25' sheet='aradiaSheet' state='walkFront' facing='Front'>
+            <action name='Talk to Aradia.' sprite='karkat' command='talk'>
+                <args>
+@AATalk ARADIA: have y0u decided t0 tr0ll them yet 
+@CGIdle KARKAT: TROLL WHO? 
+@AABored ARADIA: never mind 
+@AABored ARADIA: lets pretend i didnt say that and lets als0 pretend it isnt inevitable 
+@CGTalk KARKAT: WHAT THE FROND BUCKLING NOOK STENCH ARE YOU TALKING ABOUT. 
+@AATalk ARADIA: n0thing. its n0t like a decisi0n y0u are ab0ut t0 make will invariably lead t0 every pr0blem we have and will ever face as well as the great und0ing itself 
+@AATalk ARADIA: just keep listening t0 y0ur angry impulses it will all be fine 
+@AATalk ARADIA: actually i guess i c0uld kill y0u right n0w and st0p it all fr0m happening thus d00ming us all in an 0ffsh00t timeline 
+@AATalk ARADIA: i might c0nsider it if we all werent d00med anyway 
+@AAIdle ARADIA: and if y0u werent my friend 
+@CGTalk KARKAT: YOU KNOW WHAT WAS GREAT? WHEN YOU USED TO NOT BE A ROBOT. 
+@CGTalk KARKAT: CAUSE THIS ROBOT THING? THIS IS BULLSHIT. 
+@CGTalk KARKAT: IF WE WEREN'T ALL ABOUT TO DIE, I'D DEDICATE OUR WHOLE TEAM TO FINDING A WAY TO BRING YOU BACK TO LIFE. 
+@CGTalk KARKAT: BUT WE ARE SO GUESS WE'LL HAVE TO RIDE OUT THE NEXT FEW HOURS WITH A SPOOKY TIN CAN PSYCHOPATH, SOUNDS LIKE A BLAST. 
+@AAInsane ARADIA: 0_ _0
+                </args>
+            </action>
+            <action name='Be Future Aradia.' sprite='karkat' command='addOverlay'>
+                <args>futureAradia</args>
+                <action command='sleep'>
+                    <args>time, 600</args>
+                    <action command='talk'>
+                        <args>
+                            @! You cannot be Future Aradia because in the future, Future Aradia has exploded!
+                        </args>
+                        <action command='removeOverlay'>
+                            <args>futureAradia</args>
+                        </action>
+                    </action>
+                </action>
+            </action>
+            <action name='Talk to Aradia.' sprite='terezi' command='talk'>
+                <args>
+@AATalk ARADIA: 0h is that what feferi thinks 
+@AABored ARADIA: thats nice 
+@AABored ARADIA: havent y0u underst00d anything ab0ut h0w parad0x space w0rks 
+@AAIdle ARADIA: 0f c0urse they are the s0luti0n 
+@AATalk ARADIA: but they are als0 the pr0blem 
+@AATalk ARADIA: every effect is als0 its 0wn cause 
+@AATalk ARADIA: 0ur tw0 universes exist 0n 0pp0sing sides 0f a m0bius strip which is 0f c0urse n0thing but c0ntradicti0n 
+@AABored ARADIA: enj0y engineering the present c0nundrum as y0u try t0 s0lve it 
+@AAInsane ARADIA: im c0mpletely d0ne with this 
+@GCPassive TEREZI: GR34T T4LK1NG TO YOU 4R4D14, TH4T W4S 4 BL4ST4S USU4L
+                </args>
+            </action>
+            <action name='Talk to Aradia.' sprite='vriska' command='talk'>
+                <args>
+@AGTalk VRISKA: Hey dead girl! How's 8eing dead treating you? 
+@AATalk ARADIA: c0uldnt i ask y0u the same thing 
+@AGTalk VRISKA: Yeah, sure! If you wanted to 8e technically inaccur8. It would still 8urn though, so touche! 
+@AABored ARADIA: its really weird that y0u keep antag0nizing me 
+@AATalk ARADIA: i c0uld snap y0ur neck with a twitch 
+@AGTalk VRISKA: Yeah 8ut you won't! 
+@AAIdle ARADIA: 0k 
+@AABored ARADIA: what d0 y0u want 
+@AGTalk VRISKA: You saw the demon up close, right? You fought him! Or at least your doppelgangers did. 
+@AATalk ARADIA: yes 
+@AGIdle VRISKA: What was he like! 
+@AAIdle ARADIA: ... 
+@AATalk ARADIA: what d0 y0u want t0 kn0w specifically 
+@AGTalk VRISKA: Primarily I'm interested in your take on his weaknesses, tactical disadvantages, stuff like that. 
+@AAInsane ARADIA: 0_ _0 
+@AATalk ARADIA: are y0u seri0usly intending t0 fight him 
+@AGTalk VRISKA: Wouldn't you like to know!!!!!!!! 
+@AABored ARADIA: n0t especially
+                </args>
+            </action>
+        </character>
+
+        <character class='tavros' name='tavros' sx='-40' sy='-69' sWidth='102' sHeight='84' width='35' height='25' sheet='tavrosSheet' state='walkFront' facing='Front'>
+            <action name='Talk to Tavros.' sprite='karkat' command='talk'>
+                <args>
+@ATTalk TAVROS: hEYYY, yOU'RE AWAKE, 
+@CGTalk KARKAT: HEY, YOU KNOW WHAT WOULD HAVE BEEN AN AWESOME TIME TO TAKE THE OPPORTUNITY TO SAW YOUR LOWER TORSO OFF AND REPLACE IT WITH ROBO LEGS? 
+@ATSad TAVROS: nO, 
+@CGRancorous KARKAT: ANY GODDAMN TIME BEFORE NOW. YOU KNOW, DURING OUR WHOLE ADVENTURE WHEN THEY MIGHT HAVE COME IN HANDY. 
+@CGRancorous KARKAT: ALSO WHEN I DIDN'T HAPPEN TO BE STANDING AROUND. THAT WOULD HAVE BEEN SO SWEET. 
+@ATSad TAVROS: oHH, sORRY, i MEAN i WAS KIND OF ASLEEP TOO, sO, i DIDN'T HAVE A LOT OF SAY, 
+@ATSad TAVROS: iN THE MATTER, 
+@CGTalk KARKAT: DID YOU SEE HIM? 
+@ATTalk TAVROS: wHO, 
+@CGTalk KARKAT: THE DEMON. WHEN YOU WERE ASLEEP. 
+@ATIdle TAVROS: nO, 
+@CGJudge KARKAT: HE WAS RIGHT FUCKING THERE. I TOLD YOU TO LOOK, BUT I GUESS YOU WERE TOO BUSY FROLICKING IN THE SKY OR WHATEVER YOU DO ON THAT GAUDY YELLOW MOON. 
+@ATTalk TAVROS: oH, mAN, yEAH SKY FROLICKING WAS PROBABLY DEFINITELY THE THING i WAS PREOCCUPIED BY, 
+@CGTalk KARKAT: ANYWAY, THAT WAS JUST BEFORE HE BLEW THE PLACE UP. 
+@ATTalk TAVROS: wHOA, iS THAT WHAT HAPPENED, 
+@CGIdle KARKAT: IDIOT. 
+@CGTalk KARKAT: JUST DON'T GO TO SLEEP. SPREAD THE WORD. 
+@ATTalk TAVROS: i COULDN'T POSSIBLY SLEEP NOW, i'M TOO EXCITED ABOUT THESE AWESOME LEGS, lOOK AT ME GO, wHOOPS,
+                </args>
+                <action command='talk'>
+                    <args>@! tavros animation goes here.</args>
+                </action> 
+            </action>
+            <action name='Talk to Tavros.' sprite='terezi' command='talk'>
+                <args>
+@GCTalk TEREZI: LOOK1NG PR3TTY COOL T4VROS! >:] 
+@ATTalk TAVROS: tHANKS, i FEEL GREAT, aND REALLY CONFIDENT SUDDENLY, 
+@ATTalk TAVROS: lIKE, aS IF rUFIO GAVE ME BOTH THE HIGH FIVES HE HAS, aND THEN SORT OF ONE OF THOSE BRO MASSAGES, aS IF TO SAY, 
+@ATTalk TAVROS: yOU'RE THE CHAMP, oR THAT KIND OF THING, 
+@GCTalk TEREZI: DONT L3T 4NYON3 3V3R T3LL YOU RUF1O'S NOT R34L 
+@GCTalk TEREZI: 1F YOU B3L13V3 H4RD 3NOUGH 1N 1M4G1N4RY TH1NGS, TH4T M4K3S TH3M SL1GHTLY L3SS F4K3! 
+@ATTalk TAVROS: oKAY, tHAT'S GREAT ADVICE TO KNOW, 
+@ATTalk TAVROS: nOW i'M GOING TO GET SOME MORE LEG PRACTICE IN, 
+@ATTalk TAVROS: i FEEL LIKE i COULD TAKE ON ALL THE STAIRS IN PARADOX SPACE, aND i JUST PRETENDED AS HARD AS I COULD THAT rUFIO WINKED IN AGREEANCE, 
+@ATTalk TAVROS: sEE YOU LATER, aFTER, i'M DEFINITELY SUCCESSFUL AT ALL THE THINGS i TRY,
+                </args>
+            </action>
+            <action name='Talk to Tavros.' sprite='vriska' command='talk'>
+                <args>
+@AGIdle VRISKA: Tavros, they look amazing. YOU look amazing. 
+@AGTalk VRISKA: 8eing a8le to walk suits you so much 8etter. Have I ever told you how much of a loser you were when you were a cripple? It's a real shame a8out how that had to happen to you. 
+@ATTalk TAVROS: nO, bUT THANK YOU FOR SAYING SO, 
+@ATTalk TAVROS: i MEAN, fOR THE GOOD STUFF YOU SAID, nOT NECESSARILY THE BAD STUFF, 
+@AGTalk VRISKA: You're welcome! Now, how do those 8ad 8oys handle on stairs? 
+@ATTalk TAVROS: i DON'T KNOW, BUT I'VE BEEN ADVISED TO STAY AWAY FROM THEM, 
+@AGTalk VRISKA: Worst advice you could ever receive. I demand that you spend the next several hours mastering stairs. 
+@ATSad TAVROS: uHHHH, 
+@AGRancorous VRISKA: Come on, what would that fakey 8ullshit fantasy asshole Rufio say a8out this? 
+@ATTalk TAVROS: oH, mAN, hE WOULD MOST SURELY BE ALL ABOUT ME CLIMBING LOTS OF STAIRS, 
+@ATTalk TAVROS: pER THE REASSURANCES THAT i PRETEND HE SAYS, aND ALL THE SELF ESTEEM HE INSISTS ME TO HAVE, 
+@AGTalk VRISKA: Exactly! Now hop to it, and don't think twice a8out it, or I'll know. We don't want to have to do it the hard way now, do we? 
+@ATSad TAVROS: oH MY GOD,
+                </args>
+            </action>
+        </character>
+
+        <character class='sollux' name='sollux' sx='-25' sy='-60' sWidth='63' sHeight='81' width='35' height='25' sheet='solluxSheet' state='walkFront' facing='Front'>
+            <action name='Talk to Sollux.' sprite='karkat' command='talk'>
+                <args>
+@TATalk SOLLUX: hey kk mo2t of the2e computer2 are 2hiit. 
+@TATalk SOLLUX: 2o unle22 youve got a real good rea2on ii dont thiink iim gonna bother fiixiing them. 
+@CGTalk KARKAT: I'M FINE, THANKS FOR ASKING MAN. YOUR CONCERN IS REALLY APPRECIATED, I APPRECIATE IT. 
+@TATalk SOLLUX: fuck you and your priimadonna garbage, iim not goiing two break down 2obbiing becau2e you pa22 out at the 2iight of a liittle blood, why dont you man up. 
+@CGRancorous KARKAT: HEY FUCK YOU, I TURN AROUND AND SEE A CRAZY GIRL WITH A CHAINSAW AND A TSUNAMI OF BROWN. IS IT TOO MUCH TO ASK THAT WE NOT TURN OUR LITTLE HIDEOUT INTO A SLAUGHTERHOUSE? 
+@TATalk SOLLUX: what diid you want me two do get down on the floor and kii22 your faiinted corp2e on the lii2p two wake you up on a nonexii2tent pro2piit? 
+@CGTalk KARKAT: LET'S NOT DO THIS, OK MAN? JUST THIS ONCE. I DON'T HAVE THE ENERGY. 
+@TAIdle SOLLUX: yeah ok fiine. 
+@CGTalk KARKAT: SO WHAT'S THE DEAL WITH THESE ALIENS, IS IT ANYTHING I SHOULD GIVE A SHIT ABOUT? 
+@TATalk SOLLUX: no not at all, theyre u2ele22 and uniintere2tiing liike iim 2ure you already gathered. 
+@TATalk SOLLUX: ii recommend we dont bother wiith them, though aradiia 2eem2 two thiink well all be iin each other2 2ponge2 iineviitably. 
+@TATalk SOLLUX: whatever, iim pretty commiitted two not haviing anythiing two do wiith them ever. 
+@CGTalk KARKAT: GOOD, THAT'S WHAT I LIKE TO HEAR. 
+@TATalk SOLLUX: uh huh, 2ure kk by the look of 2ome of your future memo2 iit look2 liike youre gonna get pretty wound up by thii2 thiing 2oon. 
+@CGTalk KARKAT: MAN, FUCK MY FUTURE MEMOS. 
+@TATalk SOLLUX: no way, theyre hiilariiou2, be2t thiing about haviing you a2 a leader hand2 down. 
+@CGRancorous KARKAT: FUCK THAT SENTIMENT, AND FUCK YOU, AND FUCK FUTURE ME. 
+@TATalk SOLLUX: ok. what about pa2t you, ii2 pa2t you cool. 
+@CGRancorous KARKAT: THE ONLY GUY MORE IRRITATING AND STUPID THAN FUTURE ME IS PAST ME. 
+@TAIdle SOLLUX: ehehehehehehe.
+                </args>
+            </action>
+            <action name='Talk to Sollux.' sprite='terezi' command='talk'>
+                <args>
+@TAIdle SOLLUX: are you 2tiill 2pyiing on that iin2ufferable priick. 
+@TATalk SOLLUX: 2eriiou2ly a dude giive2 a giirl a few buck2 and 2uddenly 2he cant keep her no2e off hiim, iit ii2 2o prediictable. 
+@GCTalk TEREZI: SHUT UP SOLLUX H3S COOL 
+@GCTalk TEREZI: 1 DONT G3T WHY YOU DONT L1K3 H1M, H3 R3M1NDS M3 OF YOU 4 B1T 
+@TATalk SOLLUX: you thiink iim cool? 
+@GCIdle TEREZI: SOM3T1M3S! 
+@TAIdle SOLLUX: how often? 
+@TATalk SOLLUX: don't 2ay half the tiime. 
+@GCPassive TEREZI: >:| 
+@TATalk SOLLUX: oh god ii walked riight iinto that one diidn't ii.
+                </args>
+            </action>
+            <action name='Talk to Sollux.' sprite='vriska' command='talk'>
+                <args>
+@AGTalk VRISKA: Sollux, I never got to simultaneously thank you and reprimand you for tracing that money transfer. 
+@AGRancorous VRISKA: On the one hand, it made Terezi rich, and now she won't stop lording it over me! 
+@TATalk SOLLUX: ok, ii'm pretty much 100% po2iitiive 2he'2 not actually doiing that, but ok. 
+@AGTalk VRISKA: Shh! 8ut on the other hand, you've opened up a whole world to me with this discovery. So many people to meddle with, so many plans to hatch. 
+@AGTalk VRISKA: So really, my reaction to it is twofold. Somewhat 8ipolar if you will. Don't you think that's appropri8? 
+@TAIdle SOLLUX: man, ju2t... 
+@TAIdle SOLLUX: go away. 
+@TATalk SOLLUX: ii'm not iin the glubbiing mood. 
+@AGRancorous VRISKA: Stop saying fish things, everyone thinks it's annoying!!!!!!!!
+                </args>
+            </action>
+        </character>
+
+        <character class='nepeta' name='nepeta' sx='-35' sy='-69' sWidth='81' sHeight='90' width='35' height='25' sheet='nepetaSheet' state='walkFront' facing='Front'>
+            <action name='Talk to Nepeta.' sprite='karkat' command='talk'>
+                <args>
+@ACTalk NEPETA: :33 &lt; oh god this is so great, they look like they are so much fun! 
+@CGIdle KARKAT: WHO 
+@ACHappy NEPETA: :33 &lt; the humans!!! 
+@CGIdle KARKAT: WHAT'S A HUMAN 
+@ACCheery NEPETA: :33 &lt; the alien kids! come on karcat, you need to stop taking all these silly naps and get up to sp33d 
+@CGTalk KARKAT: WAIT, WHAT HAVE YOU BEEN DOING 
+@CGTalk KARKAT: YOU HAVEN'T BEEN PULLING YOUR RP NONSENSE ON THEM HAVE YOU? TALK ABOUT A SHITTY FIRST ENCOUNTER. 
+@CGJudge KARKAT: OK AS LEADER, I FORBID YOU FROM RP'ING WITH THEM. 
+@ACTalk NEPETA: :33 &lt; but equius already furbid me from doing that :(( 
+@ACHappy NEPETA: :33 &lt; not that i am listening to him, but shhhhh! :33 
+@CGTalk KARKAT: WAIT, HE DID? 
+@CGJudge KARKAT: OK, THEN AS YOUR LEADER I ORDER YOU TO RP WITH THEM AS MUCH AS POSSIBLE. BE AS OBNOXIOUS ABOUT IT AS YOU CAN. 
+@ACCute NEPETA: :33 &lt; yaaaaaaaaaaaaaaay!
+                </args>
+            </action>
+            <action name='Talk to Nepeta.' sprite='terezi' command='talk'>
+                <args>
+@ACCheery NEPETA: :33 &lt; terezi!!! so tell me! who is your favorite? 
+@GCTalk TEREZI: F4VOR1T3 WH4T? 
+@ACTalk NEPETA: :33 &lt; human kid! 
+@ACTalk NEPETA: :33 &lt; oh of course, you like akwete purrmusk with the black glasses!  
+@ACHappy NEPETA: :33 &lt; he is pretty cute, but mine is jade 
+@GCTalk TEREZI: OH R34LLY? 
+@ACTalk NEPETA: :33 &lt; yes, i have tried to make friends with her, but so far she thinks i am just teasing her!!!! 
+@ACIdle NEPETA: :33 &lt; its pretty furstrating. i will purrsevere though
+                </args>
+            </action>
+            <action name='Talk to Nepeta.' sprite='vriska' command='talk'>
+                <args>
+@ACTalk NEPETA: :33 &lt; *nepeta giggles at the spidergirls funny googly eye. she just cant s33m to get used to it!* 
+@AGTalk VRISKA: *Marquise Mindfang shares the innocent young catgirl's giggle, as she surreptitiously reaches for an orn8 dagger concealed in her 8oot!* 
+@ACTalk NEPETA: :33 &lt; noooooo dont roleplay as mindfang! :(( 
+@ACTalk NEPETA: :33 &lt; you only do terrible things when you are her 
+@ACTalk NEPETA: :33 &lt; why dont you pretend to be something cute for a change? 
+@AGTalk VRISKA: How a8out my spidersona? It's adora8le! 
+@ACTalk NEPETA: :33 &lt; no its not! you only do terrible things as your spidersona too 
+@ACTalk NEPETA: :33 &lt; i changed my mind, why dont we just not do any roleplaying instead 
+@AGMad VRISKA: ::::(
+                </args>
+            </action>
+        </character>
+
+        <character class='kanaya' name='kanaya' sx='-30' sy='-65' sWidth='63' sHeight='87' width='35' height='25' sheet='kanayaSheet' state='walkFront' facing='Front'>
+            <action name='Talk to Kanaya.' sprite='karkat' command='talk'>
+                <args>
+@CGTalk KARKAT: HEY I JUST GOT DONE TALKING TO YOU IN THE PAST. REMEMBER YOU WERE FUCKING AROUND WITH THE VOLCANO AND I PASSED OUT FOR AN HOUR? 
+@GATalk KANAYA: Vaguely 
+@CGRancorous KARKAT: THAT WAS NOW. HEY GUESS WHAT, NEW ORDERS. NO MORE IMPROMPTU AMPUTATIONS, OK? 
+@GATalk KANAYA: Impromptutations 
+@CGTalk KARKAT: YEAH. KEEP YOUR LIPSTICK CAPPED OK. I DON'T WANT TO TURN AROUND AND SEE RAINBOW BLOOD SPRAYING EVERY WHICH WAY JUST CAUSE YOU THINK THE PLACE IS A LITTLE DRAB. 
+@GADisgusted KANAYA: I Did My Best To Clean Up The Blood Before You Woke Up 
+@CGTalk KARKAT: THANKS FOR THAT. ALSO ANOTHER NEW ORDER. DON'T GO TO SLEEP. 
+@GAMad KANAYA: Dont Worry I Dont Really Want To Find Out What Happens If I Do 
+@GATalk KANAYA: Any Other Orders 
+@GATalk KANAYA: Such As Those Which Might Pertain To These Alien Children 
+@CGTalk KARKAT: YEAH, MY ORDERS ARE THAT THEY'RE COMPLETELY IRRELEVANT, AND WHO CARES ABOUT THEM. 
+@GAMad KANAYA: How Are Those Orders 
+@CGTalk KARKAT: BECAUSE I'M YOUR LEADER THAT'S HOW. 
+@GATalk KANAYA: They Are Not Irrelevant 
+@CGIdle KARKAT: HOW DO YOU KNOW THAT. 
+@GATalk KANAYA: Its A Bit Complicated 
+@GATalk KANAYA: But I Believe You Should Give Them A Closer Look Before You Decide What To Do About Them If Anything 
+@GATalk KANAYA: Perhaps Then An Especially Leaderly Speech Will Be In Order 
+@CGIdle KARKAT: OK I DOUBT THAT BUT WHATEVER.
+                </args>
+            </action>
+            <action name='Talk to Kanaya.' sprite='terezi' command='talk'>
+                <args>
+@GCTalk TEREZI: H3Y K4N4Y4, 4R3 YOU ST1LL OGL1NG H3R? 
+@GAIdle KANAYA: What 
+@GAIdle KANAYA: Is That What Im Doing 
+@GCTalk TEREZI: Y3S 1T 1S OBV1OUS 
+@GCTalk TEREZI: WHY TH3 1NF4TU4T1ON W1TH TH4T P4RT1CUL4R HUM4N 
+@GAIdle KANAYA: Hmm 
+@GATalk KANAYA: I Guess I Find Her Sort Of 
+@GAIdle KANAYA: Intoxicating 
+@GCChummy TEREZI: OHHHHHHHHHHH??????? >8D 
+@GADisgusted KANAYA: Intoxicatingly Underwhelming 
+@GCQuestion TEREZI: >:?
+                </args>
+            </action>
+            <action name='Be Future Kanaya.' sprite='terezi' command='talk'>
+                <args>
+                    @! nyi!!
+                </args>
+            </action>
+            <action name='Talk to Kanaya.' sprite='vriska' command='talk'>
+                <args>
+@AGIdle VRISKA: Pst! 
+@GAIdle KANAYA: Yes 
+@AGTalk VRISKA: Hey, what's your deal? 
+@GAIdle KANAYA: ... 
+@AGTalk VRISKA: I'm talking to you! 
+@GAMad KANAYA: What Do You Want 
+@AGTalk VRISKA: Nothing really! It's just you haven't said one word to me since we got here. 
+@AGTalk VRISKA: In fact, we've hardly spoken in weeks! Not since you gave me that nice dress. 
+@GAMad KANAYA: Oh Sorry I Hadnt Really Noticed 
+@AGTalk VRISKA: That was gr8, remem8er that? What happened to all that? You used to meddle and 8ug and fuss over me all the time. It was annoying, 8ut kinda fun! 
+@GAMad KANAYA: Do You Want Me To 
+@AGTalk VRISKA: I don't know. It would 8e cool if we could catch up some time though. 
+@GAMad KANAYA: Whats There Really To Catch Up On 
+@AGTalk VRISKA: Whatever! Stuff. Anything! 
+@AGTalk VRISKA: You are really strange, fussyfangs. I don't get you anymore. 
+@GAIdle KANAYA: Okay 
+@AGTalk VRISKA: That was some pretty sweet chainsaw work earlier. Pretty 8rutal, really! Didn't think you had it in you. 
+@AGTalk VRISKA: Hey, you weren't settling a score with him there 8y any chance? 
+@GAMad KANAYA: What 
+@AGTalk VRISKA: I've got a pretty keen nose for revenge. Could it 8e that you had a thing for him and were upset when he went for me instead? Hmmmmmmmm? 
+@GAMad KANAYA: Did He Really "Go" For You 
+@GAMad KANAYA: Thats Not How I Remember It 
+@AGTalk VRISKA: Yes, I think I must 8e on to something here! Anyway if that's the case, sorry a8out the 8ad 8r8k! 
+@GAMad KANAYA: Could You Leave Me Alone 
+@AGTalk VRISKA: Hey, which one are you spying on there? Someone new to meddle with? 
+@GAMad KANAYA: I Said Leave 
+@AGTalk VRISKA: Fiiiiiiiine, god.
+                </args>
+            </action>
+        </character>
+
+        <character class='equius' name='equius' sx='-25' sy='-69' sWidth='57' sHeight='84' width='35' height='25' sheet='equiusSheet' state='walkFront' facing='Front'>
+            <action name='Talk to Equius.' sprite='karkat' command='talk'>
+                <args>
+@CGJudge KARKAT: THIS ROBOLEG BULLSHIT WAS YOUR IDEA WASN'T IT. 
+@CTTalk EQUIUS: D --> I only supplied the technological means, though my lobbying for a hooven quadrupedal lower torso went tragically disregarded 
+@CGJudge KARKAT: OK I HEREBY ORDER YOU TO NEVER EVEN THINK ABOUT GIVING SOMEONE HORSELEGS AGAIN, IS THAT UNDERSTOOD. 
+@CTTalk EQUIUS: D --> Yes, I can follow that order, sir 
+@CTTalk EQUIUS: D --> Are there any other orders you would like to issue to me in a manner that is similarly forceful 
+@CGBlame KARKAT: I ALSO ORDER YOU TO STOP GETTING OFF ON MY ORDERS. FOR LIKE THE FIVE HUNDREDTH FUCKING TIME. 
+@CTTalkSweat EQUIUS: D --> Yes, and you will continue to order me to do so. I command it 
+@CTSweat EQUIUS: D --> ... 
+@CTTalkSweat EQUIUS: D --> I need a towel 
+@CGRancorous KARKAT: GO HAVE YOUR BUTLER GET YOU ONE YOU SNOOTY DOUCHE. 
+@CTTalkSweat EQUIUS: D --> Aurthour is dead, and so is his ghost 
+@CTTalkSweat EQUIUS: D --> Remember 
+@CGIdle KARKAT: YEAH. 
+@CGTalk KARKAT: SORRY MAN, I FORGOT. DIDN'T MEAN TO BRING UP A SORE SUBJECT. 
+@CTTalkSweat EQUIUS: D --> Is this where embrace jocularly, as if we are "bros",
+@CTTalkSweat EQUIUS: D --> I will be as gentle as possible 
+@CGIdle KARKAT: DON'T TOUCH ME.
+                </args>
+            </action>
+            <action name='Talk to Equius.' sprite='terezi' command='talk'>
+                <args>
+@CTTalk EQUIUS: D --> It's mystifying 
+@CTTalk EQUIUS: D --> In spite of my warnings, he seems absolutely committed to being attracted to cases of stairs like a goshdarned magnetron 
+@CTTalkSweat EQUIUS: D --> Now that I think about it, I should probably deactivate his pelvic magnetron
+                </args>
+            </action>
+            <action name='Talk to Equius.' sprite='vriska' command='talk'>
+                <args>
+@AGRancorous VRISKA: I must say, I am really disgusted 8y how you've resorted to following orders from that low class slo8 with the hideous mutant 8lood. 
+@AGMad VRISKA: I thought you were 8etter than that! I thought WE were 8etter than that. 
+@CTTalk EQUIUS: D --> I... 
+@CTTalk EQUIUS: D --> You're absolutely right, it's disgraceful 
+@CTTalk EQUIUS: D --> I think it is possibly time to admit I have some sort of problem 
+@CTTalk EQUIUS: D --> I would very much like to honor my position on the hemospectrum and mistreat those beneath me, and yet... 
+@AGTalk VRISKA: Whoa, alright! I was just messing with you, dude. As if I really give a shit a8out any of that! 
+@AGIdle VRISKA: Hahahahahahahaha.
+                </args>
+            </action>
+        </character>
+
+        <character class='eridan' name='eridan' sx='-25' sy='-69' sWidth='75' sHeight='96' width='35' height='25' sheet='eridanSheet' state='walkFront' facing='Front'>
+            <action name='Talk to Eridan.' sprite='karkat' command='talk'>
+                <args>
+@CATalk ERIDAN: wwhat a fuckin vvulgar display this is 
+@CARancorous ERIDAN: airin out all his dirty laundry like that puttin a big fuckin pile a horns in the middle of the room 
+@CATalk ERIDAN: at least i got the upright basic decency to hide my shitty wand pile somewwhere in the lab you wwont find it dont evven bother lookin 
+@CGRancorous KARKAT: WHY DO YOU ASSHOLES HAVE PILES OF THINGS, JUST STOP.
+                </args>
+            </action>
+            <action name='Talk to Eridan.' sprite='terezi' command='talk'>
+                <args>
+@CARancorous ERIDAN: hey ter can you go givve that four horned mustard blooded land licking sack of rubbish ovver there a message for me 
+@CARancorous ERIDAN: tell him to put his honey wwhere his mouth is and meet me outside for another duel 
+@GCRancorous TEREZI: 1 4M NOT M3D14T1NG B3TW33N YOU TWO! 
+@GCRancorous TEREZI: S3R1OUSLY, COULD YOU M4K3 YOUR 4DV4NC3S 4NY MOR3 OBV1OUS 3R1D4N? 
+@GCTalk TEREZI: 1F YOUR3 W4X1NG 4SH3N FOR M3, F1N3, 1... GU3SS 1M FL4TT3R3D??? 
+@GCTalk TEREZI: BUT H3S TOT4LLY NOT 3V3N 1NT3R3ST3D 1N TH3 TYP3 OF 
+@GCPassive TEREZI: UH... 
+@GCPassive TEREZI: R1V4LRY YOU W4NT W1TH H1M, OK? 
+@CASad ERIDAN: swweet stinkin murder i am truly pathetic arent i 
+@GCPassive TEREZI: Y3S, 4BSOLUT3LY
+                </args>
+            </action>
+            <action name='Talk to Eridan.' sprite='vriska' command='talk'>
+                <args>
+@AGIdle VRISKA: Hey. 
+@CAIdle ERIDAN: hey 
+@AGIdle VRISKA: So........ 
+@CAIdle ERIDAN: wwhats up 
+@AGIdle VRISKA: Nothing. 
+@AGTalk VRISKA: Standing by the old horn pile I see. 
+@CAIdle ERIDAN: yup 
+@AGIdle VRISKA: Yeah........ 
+@AGTalk VRISKA: Ok then. Carry on I guess. 
+@CATalk ERIDAN: god damn vvris wwhys it still got to be so flippin awwkwward like this come on 
+@CATalk ERIDAN: wwe used to havve a good thing goin remember our campaigns 
+@CATalk ERIDAN: that shit wwas epic wwhere are you evven goin to find a rivvalry like that 
+@AGTalk VRISKA: It was fun, Eridan. While it lasted. 
+@AGTalk VRISKA: 8ut it ran its course! I don't know what else to tell you. 
+@CARancorous ERIDAN: oh as if im not so ovver it please spare me your disdain mindfang 
+@CARancorous ERIDAN: im wworkin on findin a neww rivvalry wwhichll make ours look like a kiddie game 
+@CARancorous ERIDAN: wwhich oh by the wway IT WWAS 
+@AGTalk VRISKA: If you say so, Dualscar! 8est of luck with that. 
+@AGVain VRISKA: Too 8ad the luck's all mine now! Hahahaha.
+                </args>
+            </action>
+            <action name='Be Future Eridan.' sprite='vriska' command='talk'>
+                <args>
+                    @! nyi!!
+                </args>
+            </action>
+        </character>
+
+        <character class='feferi' name='feferi' sx='-25' sy='-69' sWidth='63' sHeight='90' width='35' height='25' sheet='feferiSheet' state='walkFront' facing='Front'>
+            <action name='Talk to Feferi.' sprite='karkat' command='talk'>
+                <args>
+@CCTalk FEFERI: Finally! So Karkat, w)(at was your dream like after you died? I )(ave been glubbing like crazy over )(ere wondering about it. 
+@CGTalk KARKAT: I'M NOT TALKING ABOUT IT. JUST DON'T GO TO SLEEP. 
+@CGTalk KARKAT: OH WAIT, YOU'RE A DERSE DREAMER, RIGHT? NEVER MIND, KNOCK YOURSELF OUT. LITERALLY. 
+@CCDisappointed FEFERI: You look so nervous and pale. Were you scared of w)(at you saw? 
+@CGTalk KARKAT: WHAT ABOUT NOT TALKING ABOUT IT DON'T YOU GET. 
+@CCTalk FEFERI: T)(ere's no reason to be scared! T)(ey are not as terrible as t)(ey look. 
+@CCTalk FEFERI: W)(en Derse is destroyed, I am going to go to sleep and prove it. 
+@CCIdle FEFERI: I will prove it to you, and to t)(em as well. 
+@CGIdle KARKAT: THEM? 
+@CCHappy FEFERI: Our new friends! You'll see. -Everyt)(ing is going to be ok. 
+@CCHappy FEFERI: T)(IS IS PR-ETTY -EXCITING! Don't you t)(ink??? 
+@CGIdle KARKAT: "M-E)("
+@CCMad FEFERI: GLUB TO T)(AT ATTITUD-E!!!!!! >38O
+                </args>
+            </action>
+            <action name='Be Future Feferi' sprite='karkat' command='talk'>
+                <args>
+                    @! nyi!!
+                </args>
+            </action>
+            <action name='Talk to Feferi.' sprite='terezi' command='talk'>
+                <args>
+@CCTalk FEFERI: Terezi, we can't just )(ide )(ere forever! We )(ave to kill t)(e demon! 
+@GCTalk TEREZI: 1 KNOW! BUT HOW? H3 S33MS 1NV1NC1BL3 
+@GCPassive TEREZI: 1F 4 THOUS4ND 4R4D14BOTS COULDNT K1LL H1M, WH4T HOP3 DO W3 H4V3? 
+@CCHappy FEFERI: T)(e )(umans! T)(ey are t)(e answer. 
+@GCTalk TEREZI: H4H4H4H4H4, S3R1OUSLY? 
+@CCIdle FEFERI: Y-----------ES!!! I am sure of it. 
+@GCPassive TEREZI: UM, OK, 1F YOU S4Y SO F3F3R1!
+                </args>
+            </action>
+            <action name='Talk to Feferi.' sprite='vriska' command='talk'>
+                <args>
+@AGTalk VRISKA: So! You sure seem excited a8out the alien kids. What gives???????? 
+@CCMad FEFERI: Glub... I wouldn't say t)(at. 
+@AGIdle VRISKA: Oh? 
+@CCTalk FEFERI: T)(e w)(ole t)(ing doesn't seem like it's wort)( getting worked up about, to be )(onest. 
+@AGMad VRISKA: ::::| 
+@CCMad FEFERI: Sig)(. T)(ey're just kind of dull. 
+@CCMad FEFERI: Life is dull and uninteresting. 
+@CCDisappointed FEFERI: I don't know, maybe I'm just a little depressed. 
+@CCDisappointed FEFERI: You probably wouldn't understand. 
+@AGTalk VRISKA: Sure I would! We all have our off days. Hey, if you need someone to talk to, I'm... 
+@CCHappy FEFERI: Pffffffffffffffffff )(-E)(-E)(-E)(-E! 
+@CCHappy FEFERI: PSYYYYYYC)(-E )(-E-E )(-E-E )(-E-E )(-E-E )(OO )(OO )(OO! 38D 
+@CCTalk FEFERI: )(oly crap did I get you good! )(ey, Sollux! Did you catc)( any of t)(at? 
+@CCTalk FEFERI: A live one jumped rig)(t into my boat! A real suckerfis)(! Woo)(oo)(oo. )(ow do you like t)(at, spider)(ag! Sea dwellers represent!!! 
+@AGMad VRISKA: That was... 
+@AGRancorous VRISKA: Surprisingly nasty of you. 
+@AGTalk VRISKA: I'm impressed! 
+@CCTalk FEFERI: T)(anks. I )(ope I didn't jeopardize our friends)(ip wit)( t)(at little stunt! 38) 
+@AGMad VRISKA: Friendship? I don't know if... 
+@AGTalk VRISKA: W8 a minute. Why you!!!!!!!! You almost got me AGAIN! 
+@AGIdle VRISKA: Have I ever told you how awesome you are, Peixes?
+                </args>
+            </action>
+        </character>
+    </classes>
+
+    <assets>
+        <asset name='aradiaSheet' type='graphic'>chars/aradia_sheet.png</asset>
+        <asset name='tavrosSheet' type='graphic'>chars/tavros_sheet.png</asset>
+        <asset name='solluxSheet' type='graphic'>chars/sollux_sheet.png</asset>
+        <asset name='nepetaSheet' type='graphic'>chars/nepeta_sheet.png</asset>
+        <asset name='kanayaSheet' type='graphic'>chars/kanaya_sheet.png</asset>
+        <asset name='equiusSheet' type='graphic'>chars/equius_sheet.png</asset>
+        <!-- <asset name='gamzeeSheet' type='graphic'>chars/gamzee_sheet.png</asset> -->
+        <asset name='eridanSheet' type='graphic'>chars/eridan_sheet.png</asset>
+        <asset name='feferiSheet' type='graphic'>chars/feferi_sheet.png</asset>
+
+
+        <!-- dialogsprites -->
+        <asset name='aradia_talk' type='graphic'>dialogsprites/aradia_talk.png</asset>
+        <asset name='aradia_bored' type='graphic'>dialogsprites/aradia_bored.png</asset>
+        <asset name='aradia_idle' type='graphic'>dialogsprites/aradia_idle.png</asset>
+        <asset name='aradia_insane' type='graphic'>dialogsprites/aradia_insane.png</asset>
+
+
+        <asset name='notfound' type='graphic'>dialogsprites/not_found.png</asset>
+    </assets>
+
+    <sprite name='futureAradia' depthing ='2'>
+        <animation sheet='notfound' />
+    </sprite>
+
+    <hud>
+        <dialogsprites>
+            <animation name='AATalk' class='aradia-dialog' sheet='aradia_talk' length='8' />
+            <animation name='AABored' class='aradia-dialog' sheet='aradia_bored' length='2' />
+            <animation name='AAIdle' class='aradia-dialog' sheet='aradia_idle' length='5' />
+            <animation name='AAInsane' class='aradia-dialog' sheet='aradia_insane' length='8' />
+
+
+<animation name='ACCheery' class='nepeta-dialog' sheet='notfound' length='1' />
+<animation name='ACCute' class='nepeta-dialog' sheet='notfound' length='1' />
+<animation name='ACHappy' class='nepeta-dialog' sheet='notfound' length='1' />
+<animation name='ACIdle' class='nepeta-dialog' sheet='notfound' length='1' />
+<animation name='ACTalk' class='nepeta-dialog' sheet='notfound' length='1' />
+
+<animation name='ATIdle' class='tavros-dialog' sheet='notfound' length='1' />
+<animation name='ATSad' class='tavros-dialog' sheet='notfound' length='1' />
+<animation name='ATTalk' class='tavros-dialog' sheet='notfound' length='1' />
+
+<animation name='CAIdle' class='eridan-dialog' sheet='notfound' length='1' />
+<animation name='CARancorous' class='eridan-dialog' sheet='notfound' length='1' />
+<animation name='CASad' class='eridan-dialog' sheet='notfound' length='1' />
+<animation name='CATalk' class='eridan-dialog' sheet='notfound' length='1' />
+
+<animation name='CCDisappointed' class='feferi-dialog' sheet='notfound' length='1' />
+<animation name='CCHappy' class='feferi-dialog' sheet='notfound' length='1' />
+<animation name='CCIdle' class='feferi-dialog' sheet='notfound' length='1' />
+<animation name='CCMad' class='feferi-dialog' sheet='notfound' length='1' />
+<animation name='CCTalk' class='feferi-dialog' sheet='notfound' length='1' />
+
+<animation name='CTSweat' class='equius-dialog' sheet='notfound' length='1' />
+<animation name='CTTalk' class='equius-dialog' sheet='notfound' length='1' />
+<animation name='CTTalkSweat' class='equius-dialog' sheet='notfound' length='1' />
+
+<animation name='GADisgusted' class='kanaya-dialog' sheet='notfound' length='1' />
+<animation name='GAIdle' class='kanaya-dialog' sheet='notfound' length='1' />
+<animation name='GAMad' class='kanaya-dialog' sheet='notfound' length='1' />
+<animation name='GATalk' class='kanaya-dialog' sheet='notfound' length='1' />
+
+<animation name='TAIdle' class='sollux-dialog' sheet='notfound' length='1' />
+<animation name='TATalk' class='sollux-dialog' sheet='notfound' length='1' />
+
+        </dialogsprites>
+    </hud>
+</sburb>

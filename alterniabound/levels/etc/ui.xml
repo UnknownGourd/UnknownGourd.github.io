@@ -1,0 +1,43 @@
+<sburb description='ui'>
+    <assets>
+        <!-- SburbFont is the font the system will try to use by default. Here we specify
+        what fonts the system should try to use. The first one it finds that works it
+        will use -->
+    <asset name='SburbFont' type='font'>
+        local:Courier New Bold, 
+        local:Courier New, 
+        url: fonts/cour.ttf,
+        weight:bold
+    </asset>
+    
+    <asset name='preloaderBG' type='graphic'>interface/load.png</asset>
+    <asset name='volumeControl' type='graphic'>interface/volumeControl.png</asset>
+    <asset name='helpControl' type='graphic'>interface/helpControl.png</asset>
+
+    <asset name='dialogBox' type='graphic'>interface/dialogBoxBig.png</asset>
+    <asset name='closeButtonSheet' type='graphic'>interface/closeconversation.png</asset>
+    
+    </assets>
+
+    <hud>
+        <spritebutton name='volumeButton' x='15' y='9' width='54' height='36' sheet='volumeControl'>
+            <action command='toggleVolume' silent='true'></action>
+        </spritebutton>
+        
+        <spritebutton name='helpButton' x='586' y='9' width='54' height='63' sheet='helpControl'>
+            <action command='talk' soft='true'>
+                <args>@! Use the _ARROW KEYS_ (or _WASD KEYS_) to move, and _SPACEBAR_ to interact.</args>
+            </action>
+        </spritebutton>
+        
+        <dialoger alertPos="56,150" talkPosRight="20,150" talkPosLeft="90,150" hiddenPos="-1000,150"
+            spriteStartLeft="-300,450" spriteEndLeft="100,450" spriteStartRight="950,450" spriteEndRight="550,450"
+            alertTextDimensions="30,30,450,220" leftTextDimensions="200,30,320,220" rightTextDimensions="30,30,330,220"
+            box="dialogBox">
+        </dialoger>
+    </hud>
+
+    <spritebutton name='closeButton' x='220' y='60' width='203' height='37' sheet='closeButtonSheet'>
+        <action command='skipDialog' silent='true'> </action>
+    </spritebutton>
+</sburb>

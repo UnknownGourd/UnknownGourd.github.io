@@ -1,0 +1,64 @@
+<sburb description='karkat'>
+
+<classes>
+    <animation class='karkat-dialog' frameInterval='3' x='-185' y='-475'/>
+
+	<character class='karkat' name='karkat' sx='-30' sy='-65' sWidth='66' sHeight='87' width='35' height='25' sheet='karkatSheet' state='walkFront' facing='Front'>
+	</character>
+	
+	<action class='beKarkat' name='Be Karkat.' command='changeChar'>
+		<args>karkat</args>
+		<action command='playSong'>
+			<args>karkatSong</args>
+		</action>
+	</action>
+
+    <action class='CCG-PGAMemo' sprite='karkat' name='Finish responding to Kanaya in memo.' command='talk'>
+        <args>
+            @! big billowing down the lane
+        </args>
+    </action>
+
+    <action class='talkGCKarkat' name='Talk to Karkat.' sprite='terezi' command='talk'>
+		<args>
+@GCTalk TEREZI: 4R3NT YOU 4T L34ST 4 L1TTL3 D1S4PPO1NT3D W3 N3V3R GOT TO H4NG OUT TOG3TH3R ON PROSP1T? 
+@CGTalk KARKAT: I DON'T KNOW. I GUESS? 
+@CGTalk KARKAT: IT'S NOT LIKE WE DIDN'T GET TO HANG OUT PLENTY OF OTHER PLACES. 
+@GCRancorous TEREZI: YOU DONT G3T 1T! TH3R3 W3R3 4LL TH3S3 TH1NGS 1 W4S PL4NN1NG ON SHOW1NG YOU 4ND STUFF W3 COULD H4V3 DON3 TOG3TH3R 
+@GCPassive TEREZI: 1T W4S SUPPOS3D TO B3 SP3C14L DUMMY 
+@CGTalk KARKAT: WHAT WAS SO SPECIAL ABOUT IT? THE FACT THAT IT WAS A MOON MADE OF GOLD? 
+@CGIdle KARKAT: BIG DEAL. THE PLACE WAS WAY TOO BRIGHT AND GARISH. 
+@GCRancorous TEREZI: 444444RGH, YOU 4R3 SO FRUSTR4T1NG! 
+@GCRancorous TEREZI: JUST 
+@GCPassive TEREZI: N3V3R M1ND >:[
+		</args>
+	</action>
+
+    <action class='talkAGKarkat' name='Talk to Karkat.' sprite='vriska' command='talk'>
+        <args>
+            @! big billowing down the lane
+        </args>
+    </action>
+</classes>
+
+<assets>
+	<asset name='karkatSheet' type='graphic'>chars/karkat_sheet.png</asset>
+	<asset name='karkatSong' type='audio'>audio/music/Crustacean.mp3</asset> <!-- loops to 0 --> 
+
+    <asset name='karkat_talk' type='graphic'>dialogsprites/karkat_talk.png</asset>
+    <asset name='karkat_rancorous' type='graphic'>dialogsprites/karkat_rancorous.png</asset>
+    <asset name='karkat_judge' type='graphic'>dialogsprites/karkat_judge.png</asset>
+    <asset name='karkat_idle' type='graphic'>dialogsprites/karkat_idle.png</asset>
+    <asset name='karkat_blame' type='graphic'>dialogsprites/not_found.png</asset>
+</assets>
+
+<hud>
+    <dialogsprites>
+        <animation name='CGTalk' class='karkat-dialog' sheet='karkat_talk' length='2' />
+        <animation name='CGRancorous' class='karkat-dialog' sheet='karkat_rancorous' length='2' />
+        <animation name='CGJudge' class='karkat-dialog' sheet='karkat_judge' length='2' />
+        <animation name='CGIdle' class='karkat-dialog' sheet='karkat_idle' length='1' />
+        <animation name='CGBlame' class='karkat-dialog' sheet='karkat_blame' length='1' />
+    </dialogsprites>
+</hud>
+</sburb>

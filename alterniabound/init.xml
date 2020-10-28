@@ -1,0 +1,10 @@
+<sburb name='alterniabound' version='0.1' description='init'
+    char='karkat' bgm='karkatSong' scale='2'
+    levelPath='alterniabound/levels' resourcePath='alterniabound/resources'>
+
+
+    <dependencies>
+        <dependency>etc/ui.xml</dependency>
+		<dependency>rooms/firstRoom.xml</dependency>
+    </dependencies>
+</sburb>
