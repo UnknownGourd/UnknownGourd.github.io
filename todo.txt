@@ -1,0 +1,36 @@
+dialog sprites
+ - karkat (done)
+ - terezi (done)
+ - vriska (done)
+
+ - aradia (done)
+ - sollux (done)
+ - gamzee (done)
+ - tavros
+ - nepeta
+ - kanaya
+ - equius
+ - eridan
+ - feferi
+
+
+vriska's room starting bakwards from:
+    cage
+    boondollar pile
+    fight
+    intro
+
+karkat's room
+
+terezi's room
+
+future terezi's room
+    - puzzle
+    - dragon talksprite
+
+transporter room
+
+"other room"
+
+trickster
+    - earthbound sprites
