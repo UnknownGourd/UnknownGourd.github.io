@@ -1,9 +1,13 @@
 <sburb description='other trolls'>
+    <dependencies>
+        <dependency>chars/gamzee.xml</dependency>
+    </dependencies>
+
     <classes>
         <animation class='aradia-dialog' frameInterval='6' x='-150' y='-450' />
 
         <animation class='tavros-dialog' frameInterval='6' x='-170' y='-475' />
-        <animation class='sollux-dialog' frameInterval='6' x='-170' y='-475' />
+        <animation class='sollux-dialog' frameInterval='6' x='-170' y='-400' />
         <animation class='nepeta-dialog' frameInterval='6' x='-170' y='-475' />
         <animation class='kanaya-dialog' frameInterval='6' x='-170' y='-475' />
         <animation class='equius-dialog' frameInterval='6' x='-170' y='-475' />
@@ -33,7 +37,7 @@
             <action name='Be Future Aradia.' sprite='karkat' command='addOverlay'>
                 <args>futureAradia</args>
                 <action command='sleep'>
-                    <args>time, 600</args>
+                    <args>nudge</args>
                     <action command='talk'>
                         <args>
                             @! You cannot be Future Aradia because in the future, Future Aradia has exploded!
@@ -279,10 +283,39 @@
 @GCQuestion TEREZI: >:?
                 </args>
             </action>
-            <action name='Be Future Kanaya.' sprite='terezi' command='talk'>
-                <args>
-                    @! nyi!!
-                </args>
+            <action name='Be Future Kanaya.' sprite='terezi' command='addOverlay'>
+                <args>futureKanaya</args>
+                <action command='deltaSprite' noDelay='true'>
+                    <args>firstRoomFG,0,-500</args>
+                <action command='sleep'>
+                    <args>nudge</args>
+                    <action command='talk'>
+                        <args>
+                            @! You are now briefly Future Kanaya, in the future.
+                        </args>
+                        <action command='presentActions'>
+                            <args>
+                                <action name='Talk to Karkat.' command='talk'>
+                                    <args>
+@GATalk KANAYA: Hey Have You Ever Heard Of The _Green Sun_
+@CGTalk KARKAT: YEAH. IT'S GOT SOMETHING TO DO WITH THEIR PLAN TO KILL NOIR.
+@GATalk KANAYA: I See
+@GATalk KANAYA: Anything More Specific Than That
+@CGTalk KARKAT: NOPE. I'VE GOT NO IDEA WHAT IT IS, WHAT IT DOES, WHAT ITS ROLE IN THE PLAN IS, OR IF IT'S GOT ANY CHANCE OF WORKING.
+@CGTalk KARKAT: WE SHOULD PROBABLY WORRY ABOUT OUR OWN PROBLEMS.
+                                    </args>
+                                    <action command='removeOverlay'>
+                                        <args>futureKanaya</args>
+                                        <action command='deltaSprite' noDelay='true'>
+                                            <args>firstRoomFG,0,500</args>
+                                        </action>
+                                    </action>
+                                </action>
+                            </args>
+                        </action>
+                    </action>
+                </action>
+                </action>
             </action>
             <action name='Talk to Kanaya.' sprite='vriska' command='talk'>
                 <args>
@@ -321,39 +354,39 @@
             <action name='Talk to Equius.' sprite='karkat' command='talk'>
                 <args>
 @CGJudge KARKAT: THIS ROBOLEG BULLSHIT WAS YOUR IDEA WASN'T IT. 
-@CTTalk EQUIUS: D --> I only supplied the technological means, though my lobbying for a hooven quadrupedal lower torso went tragically disregarded 
+@CTTalk EQUIUS: D --&gt; I only supplied the technological means, though my lobbying for a hooven quadrupedal lower torso went tragically disregarded 
 @CGJudge KARKAT: OK I HEREBY ORDER YOU TO NEVER EVEN THINK ABOUT GIVING SOMEONE HORSELEGS AGAIN, IS THAT UNDERSTOOD. 
-@CTTalk EQUIUS: D --> Yes, I can follow that order, sir 
-@CTTalk EQUIUS: D --> Are there any other orders you would like to issue to me in a manner that is similarly forceful 
+@CTTalk EQUIUS: D --&gt; Yes, I can follow that order, sir 
+@CTTalk EQUIUS: D --&gt; Are there any other orders you would like to issue to me in a manner that is similarly forceful 
 @CGBlame KARKAT: I ALSO ORDER YOU TO STOP GETTING OFF ON MY ORDERS. FOR LIKE THE FIVE HUNDREDTH FUCKING TIME. 
-@CTTalkSweat EQUIUS: D --> Yes, and you will continue to order me to do so. I command it 
-@CTSweat EQUIUS: D --> ... 
-@CTTalkSweat EQUIUS: D --> I need a towel 
+@CTTalkSweat EQUIUS: D --&gt; Yes, and you will continue to order me to do so. I command it 
+@CTSweat EQUIUS: D --&gt; ... 
+@CTTalkSweat EQUIUS: D --&gt; I need a towel 
 @CGRancorous KARKAT: GO HAVE YOUR BUTLER GET YOU ONE YOU SNOOTY DOUCHE. 
-@CTTalkSweat EQUIUS: D --> Aurthour is dead, and so is his ghost 
-@CTTalkSweat EQUIUS: D --> Remember 
+@CTTalkSweat EQUIUS: D --&gt; Aurthour is dead, and so is his ghost 
+@CTTalkSweat EQUIUS: D --&gt; Remember 
 @CGIdle KARKAT: YEAH. 
 @CGTalk KARKAT: SORRY MAN, I FORGOT. DIDN'T MEAN TO BRING UP A SORE SUBJECT. 
-@CTTalkSweat EQUIUS: D --> Is this where embrace jocularly, as if we are "bros",
-@CTTalkSweat EQUIUS: D --> I will be as gentle as possible 
+@CTTalkSweat EQUIUS: D --&gt; Is this where embrace jocularly, as if we are "bros",
+@CTTalkSweat EQUIUS: D --&gt; I will be as gentle as possible 
 @CGIdle KARKAT: DON'T TOUCH ME.
                 </args>
             </action>
             <action name='Talk to Equius.' sprite='terezi' command='talk'>
                 <args>
-@CTTalk EQUIUS: D --> It's mystifying 
-@CTTalk EQUIUS: D --> In spite of my warnings, he seems absolutely committed to being attracted to cases of stairs like a goshdarned magnetron 
-@CTTalkSweat EQUIUS: D --> Now that I think about it, I should probably deactivate his pelvic magnetron
+@CTTalk EQUIUS: D --&gt; It's mystifying 
+@CTTalk EQUIUS: D --&gt; In spite of my warnings, he seems absolutely committed to being attracted to cases of stairs like a goshdarned magnetron 
+@CTTalkSweat EQUIUS: D --&gt; Now that I think about it, I should probably deactivate his pelvic magnetron
                 </args>
             </action>
             <action name='Talk to Equius.' sprite='vriska' command='talk'>
                 <args>
 @AGRancorous VRISKA: I must say, I am really disgusted 8y how you've resorted to following orders from that low class slo8 with the hideous mutant 8lood. 
 @AGMad VRISKA: I thought you were 8etter than that! I thought WE were 8etter than that. 
-@CTTalk EQUIUS: D --> I... 
-@CTTalk EQUIUS: D --> You're absolutely right, it's disgraceful 
-@CTTalk EQUIUS: D --> I think it is possibly time to admit I have some sort of problem 
-@CTTalk EQUIUS: D --> I would very much like to honor my position on the hemospectrum and mistreat those beneath me, and yet... 
+@CTTalk EQUIUS: D --&gt; I... 
+@CTTalk EQUIUS: D --&gt; You're absolutely right, it's disgraceful 
+@CTTalk EQUIUS: D --&gt; I think it is possibly time to admit I have some sort of problem 
+@CTTalk EQUIUS: D --&gt; I would very much like to honor my position on the hemospectrum and mistreat those beneath me, and yet... 
 @AGTalk VRISKA: Whoa, alright! I was just messing with you, dude. As if I really give a shit a8out any of that! 
 @AGIdle VRISKA: Hahahahahahahaha.
                 </args>
@@ -406,10 +439,40 @@
 @AGVain VRISKA: Too 8ad the luck's all mine now! Hahahaha.
                 </args>
             </action>
-            <action name='Be Future Eridan.' sprite='vriska' command='talk'>
-                <args>
-                    @! nyi!!
-                </args>
+            <action name='Be Future Eridan.' sprite='vriska' command='addOverlay'>
+                <args>futureEridan</args>
+                <action command='deltaSprite' noDelay='true'>
+                    <args>firstRoomFG,0,-500</args>
+                <action command='sleep'>
+                    <args>nudge</args>
+                    <action command='talk'>
+                        <args>
+                            @! You are now briefly Future Eridan, in the future.
+                        </args>
+                        <action command='presentActions'>
+                            <args>
+                                <action name='Talk To Vriska.' command='talk'>
+                                    <args>
+@CARancorous ERIDAN: fuck that fuckin wwitch bleww up my computer
+@CARancorous ERIDAN: ok not literally the wwitch as in thats not literally her title or anythin
+@CARancorous ERIDAN: the seer i guess
+@CARancorous ERIDAN: fuckin lousy no good goddamn rotten seer
+@AGTalk VRISKA: Eridan! Do I detect 8lack romance in the air????????
+@AGTalk VRISKA: &lt;3&lt; &lt;3&lt; &lt;3&lt; &lt;3&lt; &lt;3&lt; &lt;3&lt; &lt;3&lt; &lt;3&lt;
+@CARancorous ERIDAN: shut yer spidertrap wwitch there are serious emotions happening ovver here
+                                    </args>
+                                    <action command='removeOverlay'>
+                                        <args>futureEridan</args>
+                                        <action command='deltaSprite' noDelay='true'>
+                                            <args>firstRoomFG,0,500</args>
+                                        </action>
+                                    </action>
+                                </action>
+                            </args>
+                        </action>
+                    </action>
+                </action>
+                </action>
             </action>
         </character>
 
@@ -431,10 +494,19 @@
 @CCMad FEFERI: GLUB TO T)(AT ATTITUD-E!!!!!! >38O
                 </args>
             </action>
-            <action name='Be Future Feferi' sprite='karkat' command='talk'>
-                <args>
-                    @! nyi!!
-                </args>
+            <action name='Be Future Feferi' sprite='karkat' command='addOverlay'>
+                <args>futureFeferi</args>
+                <action command='sleep'>
+                    <args>nudge</args>
+                    <action command='talk'>
+                        <args>
+                            @! You cannot be Future Feferi because in the future, Future Feferi is asleep!
+                        </args>
+                        <action command='removeOverlay'>
+                            <args>futureFeferi</args>
+                        </action>
+                    </action>
+                </action>
             </action>
             <action name='Talk to Feferi.' sprite='terezi' command='talk'>
                 <args>
@@ -486,6 +558,10 @@
         <asset name='eridanSheet' type='graphic'>chars/eridan_sheet.png</asset>
         <asset name='feferiSheet' type='graphic'>chars/feferi_sheet.png</asset>
 
+        <asset name='future_aradia' type='graphic'>overlays/future_aradia.png</asset>
+        <asset name='future_kanaya' type='graphic'>overlays/future_kanaya.png</asset>
+        <asset name='future_eridan' type='graphic'>overlays/future_eridan.png</asset>
+        <asset name='future_feferi' type='graphic'>overlays/future_feferi.png</asset>
 
         <!-- dialogsprites -->
         <asset name='aradia_talk' type='graphic'>dialogsprites/aradia_talk.png</asset>
@@ -493,12 +569,54 @@
         <asset name='aradia_idle' type='graphic'>dialogsprites/aradia_idle.png</asset>
         <asset name='aradia_insane' type='graphic'>dialogsprites/aradia_insane.png</asset>
 
+        <asset name='sollux_talk' type='graphic'>dialogsprites/sollux_talk.png</asset>
+        <asset name='sollux_idle' type='graphic'>dialogsprites/sollux_idle.png</asset>
+
+<!-- <asset name='nepeta_cheery' type='graphic'>dialogsprites/nepeta_cheery.png</asset>
+<asset name='nepeta_cute' type='graphic'>dialogsprites/nepeta_cute.png</asset>
+<asset name='nepeta_happy' type='graphic'>dialogsprites/nepeta_happy.png</asset>
+<asset name='nepeta_idle' type='graphic'>dialogsprites/nepeta_idle.png</asset>
+<asset name='nepeta_talk' type='graphic'>dialogsprites/nepeta_talk.png</asset>
+
+<asset name='tavros_idle' type='graphic'>dialogsprites/tavros_idle.png</asset>
+<asset name='tavros_sad' type='graphic'>dialogsprites/tavros_sad.png</asset>
+<asset name='tavros_talk' type='graphic'>dialogsprites/tavros_talk.png</asset>
+
+<asset name='eridan_idle' type='graphic'>dialogsprites/eridan_idle.png</asset>
+<asset name='eridan_rancorous' type='graphic'>dialogsprites/eridan_rancorous.png</asset>
+<asset name='eridan_sad' type='graphic'>dialogsprites/eridan_sad.png</asset>
+<asset name='eridan_talk' type='graphic'>dialogsprites/eridan_talk.png</asset>
+
+<asset name='feferi_disappointed' type='graphic'>dialogsprites/feferi_disappointed.png</asset>
+<asset name='feferi_happy' type='graphic'>dialogsprites/feferi_happy.png</asset>
+<asset name='feferi_idle' type='graphic'>dialogsprites/feferi_idle.png</asset>
+<asset name='feferi_mad' type='graphic'>dialogsprites/feferi_mad.png</asset>
+<asset name='feferi_talk' type='graphic'>dialogsprites/feferi_talk.png</asset>
+
+<asset name='equius_sweat' type='graphic'>dialogsprites/equius_sweat.png</asset>
+<asset name='equius_talk' type='graphic'>dialogsprites/equius_talk.png</asset>
+<asset name='equius_talk_sweat' type='graphic'>dialogsprites/equius_talk_sweat.png</asset>
+
+<asset name='kanaya_disgusted' type='graphic'>dialogsprites/kanaya_disgusted.png</asset>
+<asset name='kanaya_idle' type='graphic'>dialogsprites/kanaya_idle.png</asset>
+<asset name='kanaya_mad' type='graphic'>dialogsprites/kanaya_mad.png</asset>
+<asset name='kanaya_talk' type='graphic'>dialogsprites/kanaya_talk.png</asset> -->
+
 
         <asset name='notfound' type='graphic'>dialogsprites/not_found.png</asset>
     </assets>
 
     <sprite name='futureAradia' depthing ='2'>
-        <animation sheet='notfound' />
+        <animation sheet='future_aradia' />
+    </sprite>
+    <sprite name='futureKanaya' depthing ='2'>
+        <animation sheet='future_kanaya' />
+    </sprite>
+    <sprite name='futureEridan' depthing ='2'>
+        <animation sheet='future_eridan' />
+    </sprite>
+    <sprite name='futureFeferi' depthing ='2'>
+        <animation sheet='future_feferi' />
     </sprite>
 
     <hud>
@@ -507,6 +625,9 @@
             <animation name='AABored' class='aradia-dialog' sheet='aradia_bored' length='2' />
             <animation name='AAIdle' class='aradia-dialog' sheet='aradia_idle' length='5' />
             <animation name='AAInsane' class='aradia-dialog' sheet='aradia_insane' length='8' />
+
+            <animation name='TAIdle' class='sollux-dialog' sheet='sollux_idle' length='8' />
+            <animation name='TATalk' class='sollux-dialog' sheet='sollux_talk' length='2' />
 
 
 <animation name='ACCheery' class='nepeta-dialog' sheet='notfound' length='1' />
@@ -538,9 +659,6 @@
 <animation name='GAIdle' class='kanaya-dialog' sheet='notfound' length='1' />
 <animation name='GAMad' class='kanaya-dialog' sheet='notfound' length='1' />
 <animation name='GATalk' class='kanaya-dialog' sheet='notfound' length='1' />
-
-<animation name='TAIdle' class='sollux-dialog' sheet='notfound' length='1' />
-<animation name='TATalk' class='sollux-dialog' sheet='notfound' length='1' />
 
         </dialogsprites>
     </hud>

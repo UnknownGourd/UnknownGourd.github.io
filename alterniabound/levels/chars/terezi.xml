@@ -75,7 +75,7 @@
 		</args>
 	</action>
 
-	<action class='talkAGTerezi' name='Talk to Terezi' sprite='vriska' command='talk'>
+	<action class='talkAGTerezi' name='Talk to Terezi.' sprite='vriska' command='talk'>
 		<args>
 @AGTalk VRISKA: The Scourge Sisters are 8ack in action! Yeah!!!!!!!! 
 @GCRancorous TEREZI: NO W3 4R3 NOT! W1LL YOU STOP W1TH TH4T 4LR34DY??? 
@@ -96,7 +96,7 @@
 	<asset name='terezi_passive' type='graphic'>dialogsprites/terezi_passive.png</asset>
 	<asset name='terezi_rancorous' type='graphic'>dialogsprites/terezi_rancorous.png</asset>
 	<asset name='terezi_question' type='graphic'>dialogsprites/terezi_question.png</asset>
-	<asset name='terezi_idle' type='graphic'>dialogsprites/not_found.png</asset>
+	<asset name='terezi_idle' type='graphic'>dialogsprites/terezi_idle.png</asset>
 </assets>
 
 <hud>

@@ -1,0 +1,62 @@
+<sburb description='gamzee'>
+    <classes>
+        <animation class='gamzee-dialog' frameInterval='6' x='-170' y='-475' />
+
+        <sprite class='gamzee' name='gamzee' width='40' height='25' depthing='1' collidable='true'>
+            <animation name='dance' sheet='gamzeeDance' frameInterval='3' x='-30' y='-69' length='22' colSize='78' rowSize='93'/>
+        </sprite>
+
+        <action class='talkCGGamzee' command='talk'>
+            <args>
+@CGRancorous KARKAT: I JUST SLEPT ON THE FLOOR FOR AN HOUR, DOES IT LOOK I NEED A NAP???
+@CGJudge KARKAT: BESIDES, I JUST BANNED EVERYONE FROM SLEEPING, SO DON'T GO PULLING THIS HORN PILE INN KEEPER SHIT, GOT IT?
+@CGInsane KARKAT: ALSO, STOP DANCING. IT'S AWFUL.
+@TCTalk GAMZEE: Ok wElL If yOu gEt yOuR MiNd aLl cHaNgEd aBoUt tHaT ThEn yOu kNoW WhErE To fInD ThE PiLe, BeSt fRiEnD
+@CGBlame KARKAT: OH YEAH, ALSO CLEAN YOUR FUCKING GARBAGE OFF THE FLOOR. IF THIS SHIT ISN'T GONE IN A FEW HOURS I'M SERIOUSLY GOING TO FLIP OUT.
+@TCInsane GAMZEE: HoNk hOnK HoNk hOnK HoNk! :o)
+            </args>
+        </action>
+
+        <action class='talkGCGamzee' name='Talk to Gamzee.' sprite='terezi' command='talk'>
+            <args>
+@TCTalk GAMZEE: HeY CaN I InTeReSt yOu iN KiCkIn tHe wIcKeD ShIt iN ThE HoRn pIlE FoR A FeW ZeEs? 
+@TCMiracles GAMZEE: CoSt yOu oNe pInCh oF SpEcIaL StArDuSt. 
+@GCTalk TEREZI: TH4NKS G4MZ BUT NO 1 4M NOT T1R3D 
+@GCTalk TEREZI: 1 M4Y GO FOR 4NOTH3R UN3XP3CT3D HONK JUMP SOON THOUGH 
+@TCTalk GAMZEE: Oh pLeAsE No dOnT Go mOtHeRfUcKiN GeTtInG My sCaRe oN LiKe tHaT, I CaNt bE HaRdLy hAnDlInG ThAt NoIsE. 
+@GCTalk TEREZI: SORRY BUT WH3N 4 G1RL H4S TO G3T H3R HONK JUMP ON TH3R3 1S JUST NO STOPP1NG H3R 
+@TCTalk GAMZEE: OkAy wElL MaYbE WaRn mE ThEn mAyBe. 
+@GCTalk TEREZI: NO PROM1S3S! 
+@TCIdle GAMZEE: :o( 
+@GCChummy TEREZI: H3H3H3H3H3H3H3            
+            </args>
+        </action>
+
+        <action class='talkAGGamzee' name='Talk to Gamzee.' sprite='vriska' command='talk'>
+            <args>
+@TCIdle GAMZEE: VrIsKa hEy yOu wAnT To uH... 
+@AGIdle VRISKA: What? 
+@TCTalk GAMZEE: ShIt, I WaS AlL GoInG To aSk iF YoU WaNtEd tO HoP In tHe hOrN PiLe fOr a bIt oF MoThErFuCkIn sHuTeYe, BuT... 
+@TCTalk GAMZEE: I DoN'T ThInK I WiLl cAuSe i'm pReTtY MuCh sCaReD Of yOu, So yEaH. 
+@AGIdle VRISKA: Aww. ::::)
+            </args>
+        </action>
+    </classes>
+
+    <assets>
+        <asset name='gamzeeDance' type='graphic'>chars/gamzee_dance.png</asset>
+        <asset name='gamzee_talk' type='graphic'>dialogsprites/gamzee_talk.png</asset>
+        <asset name='gamzee_idle' type='graphic'>dialogsprites/gamzee_idle.png</asset>
+        <asset name='gamzee_miracles' type='graphic'>dialogsprites/gamzee_miracles.png</asset>
+        <asset name='gamzee_insane' type='graphic'>dialogsprites/gamzee_insane.png</asset>
+    </assets>
+
+    <hud>
+        <dialogsprites>
+            <animation name='TCTalk' class='gamzee-dialog' sheet='gamzee_talk' length='2' />
+            <animation name='TCIdle' class='gamzee-dialog' sheet='gamzee_idle' frameInterval='0:30,1:6,2:6,3:6' length='4' />
+            <animation name='TCMiracles' class='gamzee-dialog' sheet='gamzee_miracles' frameInterval='3' length='4' />
+            <animation name='TCInsane' class='gamzee-dialog' sheet='gamzee_insane' frameInterval='3' length='4' />
+        </dialogsprites>
+    </hud>
+</sburb>

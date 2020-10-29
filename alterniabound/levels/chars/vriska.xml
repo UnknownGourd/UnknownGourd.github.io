@@ -1,19 +1,19 @@
 <sburb description='vriska'>
 
 <classes>
-	<animation class='vriska-dialog' frameInterval='5' x='-185' y='-475'/>
+	<animation class='vriska-dialog' frameInterval='5' x='-175' y='-475'/>
 
 	<character class='vriska' name='vriska' sx='-30' sy='-65' sWidth='69' sHeight='87' width='35' height='25' sheet='vriskaSheet' state='walkFront' facing='Front'>
 	</character>
 	
-	<action class='beVriska' name='Be vriska.' command='changeChar'>
+	<action class='beVriska' name='Be Vriska.' command='changeChar'>
 		<args>vriska</args>
 		<action command='playSong'> 
 			<args>vriskaSong</args>
 		</action>
 	</action>
 	
-	<action class='talkCGVriska' name='Talk to vriska.' sprite='karkat' command='talk'>
+	<action class='talkCGVriska' name='Talk to Vriska.' sprite='karkat' command='talk'>
 		<args>
 @CGTalk KARKAT: HEY VRISKA, WHAT ARE YOU DOING. 
 @CGTalk KARKAT: PLEASE, FOR THE LOVE OF GOD, LET IT BE SOMETHING INCONSEQUENTIAL AND BENIGN. 
@@ -35,7 +35,7 @@
 		</args>
 	</action>
 
-    <action class='talkGCVriska' name='Talk to vriska.' sprite='terezi' command='talk'>
+    <action class='talkGCVriska' name='Talk to Vriska.' sprite='terezi' command='talk'>
 		<args>
 @AGTalk VRISKA: Hey, if it isn't miss money8ags! How are you enjoying your fa8ulous wealth! 
 @AGTalk VRISKA: If it was me, I would feel ashamed to get rich that way. 8y having a secret admirer just hand it to me like that, rather than earning it. That's just me though! 
@@ -62,18 +62,20 @@
 	<asset name='vriskaFastSong' type='audio'>audio/music/spidersclawLOOP2.mp3</asset>
 
 	<asset name='vriska_talk' type='graphic'>dialogsprites/vriska_talk.png</asset>
-	<asset name='vriska_vain' type='graphic'>dialogsprites/not_found.png</asset>
-	<asset name='vriska_rancorous' type='graphic'>dialogsprites/not_found.png</asset>
+	<asset name='vriska_vain' type='graphic'>dialogsprites/vriska_vain.png</asset>
+	<asset name='vriska_idle' type='graphic'>dialogsprites/vriska_idle.png</asset>
+	<asset name='vriska_rancorous' type='graphic'>dialogsprites/vriska_rancorous.png</asset>
+	<asset name='vriska_mad' type='graphic'>dialogsprites/vriska_mad.png</asset>
 </assets>
 
 <hud>
 	<dialogsprites>
 		<animation name='AGTalk' class='vriska-dialog' sheet='vriska_talk' length='11' /> <!-- holy cow -->
-		<animation name='AGVain' class='vriska-dialog' sheet='vriska_vain' length='1' />
-		<animation name='AGRancorous' class='vriska-dialog' sheet='vriska_rancorous' length='1' />
-		<animation name='AGIdle' class='vriska-dialog' sheet='vriska_rancorous' length='1' />
-		<animation name='AGMad' class='vriska-dialog' sheet='vriska_rancorous' length='1' />
+		<animation name='AGIdle' class='vriska-dialog' sheet='vriska_idle' frameInterval='0:10,1:5,2:5,3:5,4:5,5:5,6:5' length='7' />
+		<animation name='AGVain' class='vriska-dialog' sheet='vriska_vain' frameInterval='0:3,1:3,2:3,3:3,4:12' length='5' />
 
+		<animation name='AGRancorous' class='vriska-dialog' sheet='vriska_rancorous' length='6' />
+		<animation name='AGMad' class='vriska-dialog' sheet='vriska_mad' frameInterval='0:15,1:5,2:5,3:5' length='4' />
 	</dialogsprites>
 </hud>
 </sburb>

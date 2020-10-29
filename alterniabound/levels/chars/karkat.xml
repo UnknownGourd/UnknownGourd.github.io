@@ -3,7 +3,7 @@
 <classes>
     <animation class='karkat-dialog' frameInterval='3' x='-185' y='-475'/>
 
-	<character class='karkat' name='karkat' sx='-30' sy='-65' sWidth='66' sHeight='87' width='35' height='25' sheet='karkatSheet' state='walkFront' facing='Front'>
+	<character class='karkat' name='karkat' sx='-30' sy='-70' sWidth='66' sHeight='87' width='35' height='25' sheet='karkatSheet' state='walkFront' facing='Front'>
 	</character>
 	
 	<action class='beKarkat' name='Be Karkat.' command='changeChar'>
@@ -15,7 +15,24 @@
 
     <action class='CCG-PGAMemo' sprite='karkat' name='Finish responding to Kanaya in memo.' command='talk'>
         <args>
-            @! big billowing down the lane
+@! #626262CURRENT carcinoGeneticist [CCG] ##RIGHT NOW responded to memo.
+@CGIdle CCG: OK.
+@CGTalk CCG: EVERYTHING'S FINE I GUESS.
+@GATalk PGA: What Happened
+@CGTalk CCG: I PASSED OUT FOR ABOUT AN HOUR.
+@CGTalk CCG: FUCKING EMBARRASSING.
+@CGTalk CCG: YOU ARE OUT OF YOUR GODDAMN MIND, YOU KNOW.
+@GATalk PGA: Shithive Maggots You Mean
+@CGIdle CCG: YEAH
+@CGTalk CCG: IN A GOOD WAY THOUGH.
+@CGTalk CCG: OK I'M SHUTTING THIS MEMO DOWN FOR MY PAST SELF.
+@CGTalk CCG: SINCE HE'S CURRENTLY LYING UNCONSCIOUS ON THE FLOOR AN HOUR AGO.
+@CGTalk CCG: SEE YOU IN THE FUTURE-NOW.
+@GAIdle PGA: Til Then
+@! #626262CCG## banned #008141CGA## from responding to memo.
+#626262CCG## banned #626262PCG## from responding to memo.
+
+#626262CCG## closed memo
         </args>
     </action>
 
@@ -36,7 +53,11 @@
 
     <action class='talkAGKarkat' name='Talk to Karkat.' sprite='vriska' command='talk'>
         <args>
-            @! big billowing down the lane
+@CGTalk KARKAT: JUST... PLEASE. 
+@CGTalk KARKAT: GO FIND SOME REMOTE CORNER OF THIS LAB, BUILD YOURSELF A NICE WEB, AND SIT THERE PEACEFULLY AND HARMLESSLY UNTIL WE ALL DIE. OK? 
+@AGIdle VRISKA: Die? Lame. 
+@AGTalk VRISKA: Karkat, there is a8solutely no chance we are going to die. 
+@AGTalk VRISKA: Not with my luck! I got all of it, remem8er?
         </args>
     </action>
 </classes>
@@ -49,7 +70,8 @@
     <asset name='karkat_rancorous' type='graphic'>dialogsprites/karkat_rancorous.png</asset>
     <asset name='karkat_judge' type='graphic'>dialogsprites/karkat_judge.png</asset>
     <asset name='karkat_idle' type='graphic'>dialogsprites/karkat_idle.png</asset>
-    <asset name='karkat_blame' type='graphic'>dialogsprites/not_found.png</asset>
+    <asset name='karkat_blame' type='graphic'>dialogsprites/karkat_blame.png</asset>
+    <asset name='karkat_insane' type='graphic'>dialogsprites/karkat_insane.png</asset>
 </assets>
 
 <hud>
@@ -59,6 +81,7 @@
         <animation name='CGJudge' class='karkat-dialog' sheet='karkat_judge' length='2' />
         <animation name='CGIdle' class='karkat-dialog' sheet='karkat_idle' length='1' />
         <animation name='CGBlame' class='karkat-dialog' sheet='karkat_blame' length='1' />
+        <animation name='CGInsane' class='karkat-dialog' sheet='karkat_insane' length='6' />
     </dialogsprites>
 </hud>
 </sburb>

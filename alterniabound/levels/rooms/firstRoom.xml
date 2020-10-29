@@ -1,4 +1,4 @@
-<sburb description='first room'>
+<sburb description='lab'>
     <dependencies>
         <dependency>chars/karkat.xml</dependency>
         <dependency>chars/terezi.xml</dependency>
@@ -11,12 +11,12 @@
         <asset name="firstRoomFG" type="graphic">rooms/firstRoomFG.png</asset>
         <asset name='firstRoomMap' type='graphic'>rooms/firstRoomMap.png</asset>
 
-        <asset name='transportalizerSheet' type='graphic'>items/transportalizer.png</asset>
         <asset name='unirealSheet' type='graphic'>items/unireal.png</asset>
         <asset name='honkpileSheet' type='graphic'>items/honkpile.png</asset>
         <asset name='fiduspawnSheet' type='graphic'>items/fiduspawn.png</asset>
 
         <asset name='routerSheet' type='graphic'>items/router.png</asset>
+        <asset name='secretROM' type='audio'>audio/music/secretrom.mp3</asset>
         <asset name='megalovania' type='audio'>audio/music/MEGALOVANIA.mp3</asset>
         <asset name='WSSong' type='audio'>audio/music/walkstabwalk.mp3</asset>
     </assets>
@@ -29,12 +29,12 @@
                 <action class='beKarkat' />
             </character>
 
-            <sprite name='karComp' x='220' y='235' width='20' height='20' collidable='true' depthing='1'>
+            <sprite name='karComp' x='220' y='235' width='25' height='40' depthing='1'>
                 <action class='CCG-PGAMemo' />
             </sprite>
 
             <character class='terezi' x='120' y='480'>
-                <action class='talkCGTerezi' />
+                <action class='talkCGTerezi' /> 
                 <action class='lowdownTerezi' />
                 <action class='talkAGTerezi' />
                 <action class='beTerezi' />
@@ -63,13 +63,26 @@
             <character class='feferi' x='445' y='375' state='walkLeft'>
             </character>
 
-            <sprite name='transportalizer' x='440' y='535' width='80' height='50'>
-                <animation sheet='transportalizerSheet' y='-100' x='-70' />
-                <action name='Transportalize.' command='talk'>
+            <sprite class='gamzee' x='350' y='680'>
+                <action name='Talk to Gamzee.' sprite='karkat' command='talk'>
                     <args>
-                        @! There's a note here...
-                        @! TRANSPORTALIZER CLOSED. check back in a couple of days. - t
+@TCTalk GAMZEE: HeY CaN I HeLp a tIrEd lOoKiNg bRoThEr gEt hIs mOtHeRfUcKiN NaP On?
+@TCMiracles GAMZEE: sLeEp iN ThE HoRn pIlE? oNlY 420 bOoNdOlLaRs
                     </args>
+                    <action command='presentActions'>
+                        <args>
+                            <action name='No' class='talkCGGamzee' />
+                            <action name='Hell No' class='talkCGGamzee' />
+                        </args>
+                    </action>
+                </action>
+                <action class='talkGCGamzee' />
+                <action class='talkAGGamzee' />
+            </sprite>
+
+            <sprite name='room2_tele' class='tele' x='440' y='535'>
+                <action name='Transportalize.' command='teleportRemote'>
+                    <args>rooms/secondRoom.xml,secondRoom,530,650</args>
                 </action>
             </sprite>
             <sprite name='unireal' x='595' y='440' width='80' height='50'>
@@ -109,13 +122,16 @@
                 <action name="Play Vriska's Theme" command="playSong">
                     <args>vriskaSong</args>
                 </action>
+                <action name="Play Secret ROM" command="playSong">
+                    <args>secretROM</args>
+                </action>
                 <action name="Play Spider's Claw" command="playSong">
                     <args>vriskaFastSong</args>
                 </action>
                 <action name="Play Megalovania" command="playSong">
                     <args>megalovania</args>
                 </action>
-                <action name="Play Walk-Stab-Walk" command="playSong">
+                <action name="Play Walk Stab Walk" command="playSong">
                     <args>WSSong</args>
                 </action>
             </sprite>

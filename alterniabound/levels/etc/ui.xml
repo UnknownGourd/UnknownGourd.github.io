@@ -16,7 +16,13 @@
 
     <asset name='dialogBox' type='graphic'>interface/dialogBoxBig.png</asset>
     <asset name='closeButtonSheet' type='graphic'>interface/closeconversation.png</asset>
-    
+
+    <asset name='teleportSheet' type='graphic'>effects/teleport_sheet.png</asset>
+    <asset name='transportalizerSheet' type='graphic'>items/transportalizer.png</asset>
+
+    <asset name='chestOpenSheet' type='graphic'>items/chest_open.png</asset>
+    <asset name='chestClosedSheet' type='graphic'>items/chest_closed.png</asset>
+
     </assets>
 
     <hud>
@@ -30,9 +36,9 @@
             </action>
         </spritebutton>
         
-        <dialoger alertPos="56,150" talkPosRight="20,150" talkPosLeft="90,150" hiddenPos="-1000,150"
+        <dialoger alertPos="56,155" talkPosRight="20,155" talkPosLeft="90,155" hiddenPos="-1000,155"
             spriteStartLeft="-300,450" spriteEndLeft="100,450" spriteStartRight="950,450" spriteEndRight="550,450"
-            alertTextDimensions="30,30,450,220" leftTextDimensions="200,30,320,220" rightTextDimensions="30,30,330,220"
+            alertTextDimensions="30,30,475,220" leftTextDimensions="210,30,300,220" rightTextDimensions="25,30,300,220"
             box="dialogBox">
         </dialoger>
     </hud>
@@ -40,4 +46,25 @@
     <spritebutton name='closeButton' x='220' y='60' width='203' height='37' sheet='closeButtonSheet'>
         <action command='skipDialog' silent='true'> </action>
     </spritebutton>
+
+    <effects>
+        <animation name='teleportEffect' y='-110' x='-66' sheet='teleportSheet' frameInterval='2' length='6' loopNum='0' />
+    </effects>
+    <classes>
+        <sprite class='tele' name='transportalizer' width='80' height='50'>
+            <animation sheet='transportalizerSheet' y='-100' x='-70' />
+        </sprite>
+        <action class='tele_closed' name='Transportalize.' command='talk'>
+            <args>
+                @! There's a note here...
+                @! TRANSPORTALIZER CLOSED. check back in a couple of days. - t
+            </args>
+        </action>
+
+        <sprite class='chest' width='80' height='20' collidable='true' depthing='1'>
+            <animation name='closed' sheet='chestClosedSheet' x='-70' y='-61' />
+			<animation name='open' sheet='chestOpenSheet' x='-70' y='-61' loopNum='0' followUp='opened'/>
+			<animation name='opened' sheet='chestOpenSheet' x='-70' y='-61' loopNum='0'/>
+        </sprite>
+    </classes>
 </sburb>
