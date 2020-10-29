@@ -1,0 +1,54 @@
+<sburb description='second room'>
+
+    <assets>
+        <asset name='secondRoomBG' type='graphic'>rooms/secondRoomBG.png</asset>
+        <asset name='secondRoomMap' type='graphic'>rooms/secondRoomMap.png</asset>
+
+        <asset name='item_1' type='graphic'>items/item_1.png</asset>
+        <asset name='item_2' type='graphic'>items/item_2.png</asset>
+    </assets>
+
+    <sprite name='item_1' depthing='3'>
+	    <animation sheet='item_1' x='-45' y='-42'/>
+    </sprite>
+
+    <sprite name='item_2' depthing='3'>
+	    <animation sheet='item_2' x='-37' y='-25'/>
+    </sprite>
+
+    <rooms>
+        <room name='secondRoom' walkableMap='secondRoomMap' mapScale='3'>
+
+
+            <sprite name='room1_tele' class='tele' x='530' y='650'>
+                <action name='Transportalize.' command="teleport">
+                    <args>firstRoom,440,535</args>
+                </action>
+            </sprite>
+
+            <sprite name='chest_2' class='chest' x='230' y='670'>
+                <action name='Open Chest' command='openChest'>
+                    <args>chest_2,item_2, @! You got SOME BOONDOLLARS! @! Who cares.</args>
+                </action>
+            </sprite>
+
+            <sprite name='chest_1' class='chest' x='830' y='670'>
+                <action name='Open Chest' command='openChest'>
+                    <args>chest_1,item_1, @! You got the trusty CLAWSICKLE!</args>
+                </action>
+            </sprite>
+
+            <sprite name='room3_tele' class='tele' x='530' y='330'>
+                <action class='tele_closed' />
+            </sprite>
+
+            <sprite name='room4_tele' class='tele' x='530' y='970'>
+                <action class='tele_closed' />
+            </sprite>
+
+            <sprite name='secondRoomBG'>
+                <animation sheet='secondRoomBG' />
+            </sprite>
+        </room>
+    </rooms>
+</sburb>
